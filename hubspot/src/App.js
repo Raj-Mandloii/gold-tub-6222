@@ -4,7 +4,6 @@ import FreeHubSpotCRM from './Components/Software/FreeHubSpotCRM';
 function App() {
   return (
     <div className="App">
-      <FreeHubSpotCRM/>
     </div>
   );
 }
