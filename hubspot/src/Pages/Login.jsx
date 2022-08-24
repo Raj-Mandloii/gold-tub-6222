@@ -124,6 +124,18 @@ const Login = () => {
         <Text fontSize={["xs", "sm", "md"]}>
           ©2022 HubSpot, Inc. All Rights Reserved.
         </Text>
+        <a
+          href="https://legal.hubspot.com/privacy-policy"
+          target="_blannk"
+          style={{
+            fontSize: "14px",
+            textAlign: "center",
+            color: "darkcyan",
+            fontWeight: "600",
+          }}
+        >
+          Privacy Policy
+        </a>
       </Stack>
     </Box>
   );
