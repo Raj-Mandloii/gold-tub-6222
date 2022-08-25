@@ -1,5 +1,12 @@
-import { Box, Button, Flex, Text, Spacer, Image, chakra, textDecoration } from '@chakra-ui/react'
-import { PhoneIcon, AddIcon, CheckIcon } from '@chakra-ui/icons'
+import {
+  Box, Button, Flex, Text, Spacer, Image, chakra, textDecoration, Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionIcon,
+  AccordionPanel,
+} from '@chakra-ui/react'
+import { PhoneIcon, AddIcon, CheckIcon,ExternalLinkIcon } from '@chakra-ui/icons';
+import styles from "../../Components/Software/CSS/FreeHubSpotCRM.module.css"//"./CSS/FreeHubSpotCRM.module.css";
 import React from 'react'
 import communiy from "../../Assets/community.png"
 import collar from "../../Assets/collar.png"
@@ -8,6 +15,7 @@ import svgfordiv from "../../Assets/svgfordiv.png"
 import { useState } from 'react'
 export default function FreeTools() {
   const [underline, setUnderline] = useState(false);
+  const [link, setLink] = useState(false);
   const data = [
     ["Forms", "Email marketing", "Ad management", "Landing pages", "Shared inbox"],
     ["Live chat", "Basic bots", "Team email", "Customizable quotes", "Email scheduling"],
@@ -15,7 +23,6 @@ export default function FreeTools() {
     ["Drag-and-drop editor", "Mobile optimization", "Blog", "Standard SSL certificate", "Website pages"],
     ["Data sync", "Historical sync", "Default field mappings", "App Marketplace integrationss", "Contact management"],
   ]
-
   const headings = [
     "FREE MARKETING TOOLS:",
     "FREE SALES/CRM TOOLS:",
@@ -91,20 +98,57 @@ export default function FreeTools() {
         <Text fontWeight={"bold"}>Not sure which plan is right for you?</Text>
         <Text fontWeight={"bold"}>Give us a call.</Text>
         <Box display={"flex"} justifyContent={"center"}>
-        <Button isActive colorScheme='white'
-          
-          border={"1px solid gray"} borderRadius={"3em"}  p={7} mt={"2em"} mb={"2em"} pl={'7em'} pr={"7em"}>
-            {/* ml={"42em"} mr={"42em"} */}
-          <PhoneIcon mt={"0.1em"} mr={"0.6em"} w={3} h={3} color={"gray"} />
-          <Text onMouseLeave={() => setUnderline(false)}
-            onMouseEnter={() => {
-              setUnderline(true);
+          <Button isActive colorScheme='white'
 
-            }} as={!underline ? "" : "u"} fontSize={"1.2em"} color={"#1F91AE"}>+91 11712-79211</Text>
-        </Button>
+            border={"1px solid gray"} borderRadius={"3em"} p={7} mt={"2em"} mb={"2em"} pl={'7em'} pr={"7em"}>
+            {/* ml={"42em"} mr={"42em"} */}
+            <PhoneIcon mt={"0.1em"} mr={"0.6em"} w={3} h={3} color={"gray"} />
+            <Text onMouseLeave={() => setUnderline(false)}
+              onMouseEnter={() => {
+                setUnderline(true);
+
+              }} as={!underline ? "" : "u"} fontSize={"1.2em"} color={"#1F91AE"}>+91 11712-79211</Text>
+          </Button>
         </Box>
 
       </Flex>
+
+      {/* ----------------------      Frequently                     Asked                   Questions      -------------------------------        */}
+      <Flex justifyContent={"center"} direction={"column"}>
+        <Box pt={"2em"} bgSize={"contain"} 
+        h={"auto"} 
+        minH={"52em"}
+        w={"100%"} 
+        backgroundPosition={"center"} bgRepeat={"no-repeat"} 
+        bgImage={"//static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/bottom-blob.svg"}>
+        <Text mb={"1em"} color={"#33475B"} mt={["6em","4em","1em","0.3em"]} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
+            <br />
+            <Faq/>
+            <Faq/>
+            <Faq/>
+            <Faq/>
+            <Faq/>
+            <Faq/>
+            <Box display={"flex"} justifyContent={"center"}>
+              <Text pr={"3px"} fontSize={"12px"}>
+              For more detailed information on product packaging and the limits that apply, please see our </Text>
+              
+            <Text  onMouseLeave={() => setLink(false)}
+              onMouseEnter={() => {
+                setLink(true);
+
+              }} as={!link ? "" : "u"} fontSize={"12px"} color={"#1F91AE"}>Product and Services Catalog.</Text>
+              <ExternalLinkIcon mt={"0.2em"}  w={3} h={3} color={"gray"} />
+            </Box>
+           
+        </Box>
+      </Flex>
+
+      <Text mb={"1em"} color={"#33475B"} mt={["-6em","-4em","1em","1em"]} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >
+      Start growing today with HubSpot’s free tools.</Text>
+      <Button sx={buttonStyle}>Get started free</Button>
+
+
     </Box>
   )
 }
@@ -143,5 +187,59 @@ function InsideText({ content }) {
       <CheckIcon color={"gray"} mt={"0.2em"} />
       <Text sx={textStyle}>{content}</Text>
     </Flex>
+  )
+}
+
+function Faq() {
+
+  return (
+    <Box w={["87%","87%","87%","52%"]} m="auto">
+      <Accordion allowToggle>
+        <AccordionItem
+         
+          py={["0em","0em","0em","1rem"]}
+          background="white"
+          border="1px solid gray"
+          mb="1rem"
+        >
+          <Text>
+            <AccordionButton>
+              <AccordionIcon color="cyan.600" fontSize="20px" />
+              <Box
+                ml="1rem"
+                flex="1"
+                textAlign="left"
+                fontWeight="600"
+                fontSize="12px"
+              >
+                What is CRM software?
+              </Box>
+            </AccordionButton>
+          </Text>
+          <AccordionPanel
+            color="gray.600"
+            mx="1.5rem"
+            align="left"
+            pb={4}
+          >
+            CRM stands for “customer relationship management.” Customer
+            relationship management software is a powerful tool that helps
+            businesses organize and manage their customer relationships on
+            a centralized and easy-to-use platform. By tracking leads and
+            building a full database of customer activity, businesses have
+            clear insight into where they stand with each customer in the
+            buying process. <br />
+            <br />
+            When you use HubSpot’s CRM solution, your CRM is automatically
+            integrated with your HubSpot marketing, sales, customer
+            service, and operations tools right out of the box. This makes
+            it easy to optimize and personalize your campaigns and
+            processes with data from your CRM, which leads to more
+            powerful and impactful work from your teams
+          </AccordionPanel>
+        </AccordionItem>
+        
+      </Accordion>
+    </Box>
   )
 }
