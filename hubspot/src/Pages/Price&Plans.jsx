@@ -1,6 +1,7 @@
 import { Box, Flex, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import React from 'react'
 import FreeTools from '../Components/Price&PlansComponents/FreeTools'
+import { Marketing } from '../Components/Price&PlansComponents/Marketing'
 
 export default function PriceAndPlans() {
     const tabStyle = {
@@ -11,12 +12,11 @@ export default function PriceAndPlans() {
     return (
         <Box >
             <Flex w={"100%"} direction={"row"} justifyContent={"center"}>
-                <Tabs size={"sm"} orientation={["vertical","vertical","horizontal","horizontal"]} w={"100%"} variant='line' colorScheme='gray' >
+                <Tabs size={"sm"} orientation={["vertical", "vertical", "horizontal", "horizontal"]} w={"100%"} variant='line' colorScheme='gray' >
                     <Box w={"100%"} boxShadow='2xl' p='6' rounded='md' bg='white'>
                         <Flex  >
-                            <TabList w={"100%"} bgColor={"white"} border={"1px solid white"} justifyContent={"space-evenly"}>
+                            <TabList  w={"100%"} bgColor={"white"} border={"1px solid white"} justifyContent={"space-evenly"}>
                                 <Box></Box>
-
                                 <Tab sx={tabStyle} >Free Tools</Tab>
                                 <Tab sx={tabStyle}>Marketing</Tab>
                                 <Tab sx={tabStyle}>Sales</Tab>
@@ -30,10 +30,11 @@ export default function PriceAndPlans() {
                     <TabPanels>
                         <TabPanel bgColor={"white"}>
                             <FreeTools />
-                            {/* <p>two!</p> */}
+
                         </TabPanel>
                         <TabPanel bgColor={"white"}>
-                            <p>two!</p>
+
+                            <Marketing />
                         </TabPanel>
                         <TabPanel bgColor={"white"}>
                             <p>two!</p>

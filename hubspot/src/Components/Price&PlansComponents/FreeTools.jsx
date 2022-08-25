@@ -5,8 +5,7 @@ import {
   AccordionIcon,
   AccordionPanel,
 } from '@chakra-ui/react'
-import { PhoneIcon, AddIcon, CheckIcon,ExternalLinkIcon } from '@chakra-ui/icons';
-import styles from "../../Components/Software/CSS/FreeHubSpotCRM.module.css"//"./CSS/FreeHubSpotCRM.module.css";
+import { PhoneIcon, AddIcon, CheckIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import React from 'react'
 import communiy from "../../Assets/community.png"
 import collar from "../../Assets/collar.png"
@@ -115,37 +114,33 @@ export default function FreeTools() {
 
       {/* ----------------------      Frequently                     Asked                   Questions      -------------------------------        */}
       <Flex justifyContent={"center"} direction={"column"}>
-        <Box pt={"2em"} bgSize={"contain"} 
-        h={"auto"} 
-        minH={"52em"}
-        w={"100%"} 
-        backgroundPosition={"center"} bgRepeat={"no-repeat"} 
-        bgImage={"//static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/bottom-blob.svg"}>
-        <Text mb={"1em"} color={"#33475B"} mt={["6em","4em","1em","0.3em"]} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
-            <br />
-            <Faq/>
-            <Faq/>
-            <Faq/>
-            <Faq/>
-            <Faq/>
-            <Faq/>
-            <Box display={"flex"} justifyContent={"center"}>
-              <Text pr={"3px"} fontSize={"12px"}>
+        <Box pt={"2em"} bgSize={"contain"}
+          h={"auto"}
+          minH={"52em"}
+          w={"100%"}
+          backgroundPosition={"center"} bgRepeat={"no-repeat"}
+          bgImage={"//static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/bottom-blob.svg"}>
+          <Text mb={"1em"} color={"#33475B"} mt={["6em", "4em", "1em", "0.3em"]} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
+          <br />
+          <Faq />
+
+          <Box display={"flex"} justifyContent={"center"}>
+            <Text pr={"3px"} fontSize={"12px"}>
               For more detailed information on product packaging and the limits that apply, please see our </Text>
-              
-            <Text  onMouseLeave={() => setLink(false)}
+
+            <Text onMouseLeave={() => setLink(false)}
               onMouseEnter={() => {
                 setLink(true);
 
               }} as={!link ? "" : "u"} fontSize={"12px"} color={"#1F91AE"}>Product and Services Catalog.</Text>
-              <ExternalLinkIcon mt={"0.2em"}  w={3} h={3} color={"gray"} />
-            </Box>
-           
+            <ExternalLinkIcon mt={"0.2em"} w={3} h={3} color={"gray"} />
+          </Box>
+
         </Box>
       </Flex>
 
-      <Text mb={"1em"} color={"#33475B"} mt={["-6em","-4em","1em","1em"]} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >
-      Start growing today with HubSpot’s free tools.</Text>
+      <Text mb={"1em"} color={"#33475B"} mt={["-6em", "-4em", "1em", "1em"]} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >
+        Start growing today with HubSpot’s free tools.</Text>
       <Button sx={buttonStyle}>Get started free</Button>
 
 
@@ -191,54 +186,77 @@ function InsideText({ content }) {
 }
 
 function Faq() {
+  const faqArray = [
+    {
+      title: "Are HubSpot's free tools are really free?",
+      desc: `Yes! This is not a free trial. HubSpot’s free tools are 100% free — simple as that. 
+    You can add 1,000,000 contacts, unlimited free users, and your free access has no time limit. 
+    Just be aware that if you use HubSpot’s free CRM tools with Marketing Hub, the contacts you add to your free CRM tools end up in both places, 
+    which could affect your Marketing Hub subscription’s contact tier pricing.`},
+    {
+      title: "What are the limits of free HubSpot account?",
+      desc: `HubSpot’s free tools offer many “lite” versions of select tools featured in our paid products. 
+    There are limits to your free HubSpot account, which differ by feature. Learn more about limits.
+    `},
+    {
+      title: "Does HubSpot's free tools integrate with my email?",
+      desc: `Yes, you can connect HubSpot’s free CRM tools to Gmail, G Suite, and many versions of Outlook.
+    `},
+    {
+      title: "What is user, and how many can I have with my free HubSpot Account?",
+      desc: `You can think of a user as any person who has access to use the HubSpot software. 
+    You can always have unlimited free users, whether or not you decide to upgrade some users to a paid version of Sales Hub or Service Hub. That means even if you upgrade, you only need to pay for the users who need access to paid features — and your other free users will still remain free!
 
+    Paid plans, however, include a set number of paid users that you can increase on a per-user basis.
+    `},
+    {
+      title: "How many contact can I upload into my fee HubSpot account",
+      desc: `You can add up to 1,000,000 contacts to your free HubSpot account. Just be aware that if you use HubSpot’s free CRM tools with Marketing Hub, the contacts you add to your free CRM tools end up in both places, which could affect your Marketing Hub subscription’s contact tier pricing.
+    `},
+    {
+      title: "What type of support are available to free HubSpot users?",
+      desc: `There are several types of support available to free HubSpot CRM users. HubSpot offers support for many languages including English, French, German, Japanese, and Portuguese. For the full list of languages HubSpot supports, view HubSpot’s language offering.
+
+    Free HubSpot users can chat with fellow software users in HubSpot Community, sharpen their skills in HubSpot Academy, and get expert advice on HubSpot tools in the Knowledge Base.
+    
+    `},
+
+  ]
   return (
-    <Box w={["87%","87%","87%","52%"]} m="auto">
+    <Box w={["87%", "87%", "87%", "52%"]} m="auto">
       <Accordion allowToggle>
-        <AccordionItem
-         
-          py={["0em","0em","0em","1rem"]}
-          background="white"
-          border="1px solid gray"
-          mb="1rem"
-        >
-          <Text>
-            <AccordionButton>
-              <AccordionIcon color="cyan.600" fontSize="20px" />
-              <Box
-                ml="1rem"
-                flex="1"
-                textAlign="left"
-                fontWeight="600"
-                fontSize="12px"
-              >
-                What is CRM software?
-              </Box>
-            </AccordionButton>
-          </Text>
-          <AccordionPanel
-            color="gray.600"
-            mx="1.5rem"
-            align="left"
-            pb={4}
+        {faqArray.map(item => (
+          <AccordionItem
+            py={["0em", "0em", "0em", "1rem"]}
+            background="white"
+            border="1px solid gray"
+            mb="1rem"
           >
-            CRM stands for “customer relationship management.” Customer
-            relationship management software is a powerful tool that helps
-            businesses organize and manage their customer relationships on
-            a centralized and easy-to-use platform. By tracking leads and
-            building a full database of customer activity, businesses have
-            clear insight into where they stand with each customer in the
-            buying process. <br />
-            <br />
-            When you use HubSpot’s CRM solution, your CRM is automatically
-            integrated with your HubSpot marketing, sales, customer
-            service, and operations tools right out of the box. This makes
-            it easy to optimize and personalize your campaigns and
-            processes with data from your CRM, which leads to more
-            powerful and impactful work from your teams
-          </AccordionPanel>
-        </AccordionItem>
-        
+            <Text>
+              <AccordionButton>
+                <AccordionIcon color="cyan.600" fontSize="20px" />
+                <Box
+                  ml="1rem"
+                  flex="1"
+                  textAlign="left"
+                  fontWeight="600"
+                  fontSize="12px"
+                >
+                  {item.title}
+                </Box>
+              </AccordionButton>
+            </Text>
+            <AccordionPanel
+              color="gray.600"
+              mx="1.5rem"
+              align="left"
+              pb={4}
+              fontSize={"12px"}
+            >{item.desc}
+            </AccordionPanel>
+          </AccordionItem>
+        ))}
+
       </Accordion>
     </Box>
   )
