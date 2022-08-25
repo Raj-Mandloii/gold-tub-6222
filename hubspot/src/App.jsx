@@ -9,11 +9,11 @@ import Login from "./Pages/Login";
 function App() {
   return (
     <Box className="App">
-      {/* <Pricing />
+      <Pricing />
       <Footer />
-      <FreeHubSpotCRM /> */}
+      <FreeHubSpotCRM />
       <TabPage />
-      {/* <Login /> */}
+      <Login />
     </Box>
   );
 }
