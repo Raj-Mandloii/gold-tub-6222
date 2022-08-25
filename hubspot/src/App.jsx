@@ -7,6 +7,7 @@ import TabPage from "./Pages/TabsPage";
 function App() {
   return (
     <Box className="App">
+      
       <Footer />
       <FreeHubSpotCRM/>
       <TabPage/>
