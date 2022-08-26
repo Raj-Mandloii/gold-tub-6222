@@ -17,7 +17,7 @@ export const ImgObj={
     Business:"https://www.hubspot.com/hubfs/Business-Owner-1-1.png",
     CrmLaptop:"https://www.hubspot.com/hubfs/Premium-CRM-Device@2x.png",
     Calendar:"https://www.hubspot.com/hubfs/Sales%20Leader%202@2x-2.png",
-
+    
     
 
 }

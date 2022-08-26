@@ -25,6 +25,7 @@ import Marketers from "./TabbarComponents/Marketers";
 import Customer from "./TabbarComponents/Customer";
 import Operation from "./TabbarComponents/Operation";
 import Business from "./TabbarComponents/Business";
+import Footer from "../Footer";
 
 const FreeHubSpotCRM = () => {
   return (
@@ -433,7 +434,9 @@ const FreeHubSpotCRM = () => {
           </Box>
         </Box>
         {/* //add the footer page */}
-        <div>Footer</div>
+        <div>
+          <Footer/>
+        </div>
       </div>
     </>
   );
