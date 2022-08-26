@@ -1,8 +1,10 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Text, Box, Flex} from '@chakra-ui/react'
 import BelowThreeCards from '../Components/Below3Cards'
 import BelowHeader from '../Components/BelowHeader'
+import CABAfterHeader from '../Components/CABAfterHeader'
 import CalculateYourPrice from '../Components/CalculateYourPrice'
 import Card from '../Components/Card'
+import CreateABundleHeader from '../Components/CreateABundleHeader'
 import CrmSuiteHeader from '../Components/CrmSuiteHeader'
 import CustomerSupport from '../Components/CustomerSupport'
 import Footer from '../Components/Footer'
@@ -47,7 +49,11 @@ export default function TabPage(){
                     <Footer/>
                 </TabPanel>
                 <TabPanel>
-                    <Text fontSize={"xl"}>Tab Two</Text>
+                    {/* <Text fontSize={"xl"}>Tab Two</Text> */}
+                    <Box  height="25vh">
+                        <CreateABundleHeader/>
+                        <CABAfterHeader/>
+                    </Box>
                 </TabPanel>
             </TabPanels>
            

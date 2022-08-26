@@ -45,7 +45,7 @@ export default function CalculateYourPrice(){
                             <Text color={"cyan.700"} fontSize="small" fontWeight="semibold" mt={"0.7%"} ml="1%">More details.</ Text>
                         </Flex>
                     </Box>
-                    <Button variant={"outline"} border="1px solid lightgrey" size={"lg"} width="150px" mt={"4%"}>1,000</Button>
+                    <Button variant={"outline"} border="1px solid lightgrey" size={"lg"} width="150px" mt={"4%"} mr="3%">1,000</Button>
                     </Flex>
                     <Slider aria-label='slider-ex-2' colorScheme='gray' defaultValue={30} width="90%"
                     mr={"4.5%"}>
