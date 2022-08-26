@@ -11,7 +11,7 @@ import "./CalculateYourPrice.css"
 export default function CalculateYourPrice(){
 
     return(
-        <Box bgColor={"lightgray"}  color="#33475b">
+        <Box bgColor={"gray.50"}  color="#33475b">
             <Text fontSize={"4xl"} fontWeight="bold" color="#33475b">Calculate Your Price</Text>
             <Text color={"cyan.700"} fontWeight="semibold" textAlign={"right"} mr="5%" mb={"2%"}><ArrowUpIcon/> Back to top</Text>
             <Flex>
@@ -112,7 +112,7 @@ export default function CalculateYourPrice(){
                     </Flex>
                     <Text fontWeight={"semibold"} textAlign="left" ml={"3%"} mt="3.5%">Add-ons</Text>
                     <Text textAlign={"left"} ml={"3%"} fontWeight="light" mt={"2%"}>Customize and enhance your plan with additional features.</Text>
-                    <Box border={"1px solid cyan"} width="80%" ml={"3%"} mt="3%">
+                    <Box border={"1px solid cyan"} width="80%" ml={"3%"} mt="3%" mb={"3%"} p="1% 0 1% 0">
                     <Checkbox colorScheme='green' defaultChecked textAlign={"left"} ml="3%">
                         <Text fontWeight={"semibold"}>API Limit Increase</Text>
                         <Text fontWeight={"light"}>$500.00/mo</Text>
@@ -120,7 +120,8 @@ export default function CalculateYourPrice(){
                     </Checkbox>
                     </Box>
                 </Box>
-                <Box bgColor={"white"} border="1px solid grey" borderTop="2px solid cyan" width={"35%"} 
+                <Box bgColor={"white"} border="1px solid grey" borderTop="2px solid cyan" width={"35%"}
+                 height="135vh" 
                 >
                     <Box>
                     <Flex width="75%" height={"50px"} bgColor={"gray.300"} m="auto" mt={"4%"}
@@ -180,7 +181,7 @@ export default function CalculateYourPrice(){
                     <Button bgColor={"#ff7a59"} size="lg" color={"white"} width={"80%"}>Buy Now</Button>
                     <Text fontWeight={"semibold"} color="cyan.700" mt={"4%"}>View price breakdown</Text>
                     <Text fontWeight={"semibold"} color="cyan.700" mt={"2%"}><Icon as={FiShare}/> Share this price</Text>
-                    <Text color={"grey"} mt="5%" fontSize={"small"}>Disclaimer</Text>
+                    <Text color={"grey"} mt="15%" fontSize={"small"}>Disclaimer</Text>
                 </Box>
             </Flex>
         </Box>

@@ -7,8 +7,8 @@ import {FiExternalLink} from "react-icons/fi"
 export default function BelowThreeCards(){
 
     return(
-            <Box color={"rgb(51, 71, 91)"}>
-                <Box border={"1px solid red"} >
+            <Box color={"rgb(51, 71, 91)"} mt="5%" mb={"3%"}>
+                <Box  >
                     <Text fontSize={"large"} fontWeight="semibold">Not sure which plan is right for you?</Text>
                     <Text>Give us a call.</Text>
                     <Flex border={"1px solid grey"} width="35%" height={"60px"} borderRadius="25px" m={"auto"} justify="center" alignItems={"center"} gap="3%">
