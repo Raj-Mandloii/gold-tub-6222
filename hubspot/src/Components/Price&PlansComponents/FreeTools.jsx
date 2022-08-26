@@ -152,7 +152,8 @@ export default function FreeTools() {
 
 function Divs({ heading, array }) {
   return (
-    <Box m={4} w={["93%", "93%", "93%", "13%"]} border={"0.001px solid gray"} pb={"1em"} pt="10" pl={"1em"} pr={"0.3em"} rounded='md' bg='white'>
+    // 
+    <Flex direction={"column"} overflow={"hidden"} minH={["22em","22em","26em","26em"]} justifyContent={"space-evenly"}  m={4} w={["93%", "93%", "93%", "13%"]} border={"0.001px solid gray"} pb={"1em"} pt="10" pl={"1em"} pr={"0.3em"} rounded='md' bg='white'>
       <Text textAlign={"start"} fontWeight={"700"} pb="1em" fontSize={["16px", "16px", "16px", "16px"]}>{heading}</Text>
       {/*  */}
       <InsideText content={array[0]} />
@@ -162,7 +163,7 @@ function Divs({ heading, array }) {
       <InsideText content={array[4]} />
       <hr style={{ color: "black", height: "1em" }} />
       <a style={{ color: "#1F91AE" }} href=''>See all features</a>
-    </Box>
+    </Flex>
   )
 
 
