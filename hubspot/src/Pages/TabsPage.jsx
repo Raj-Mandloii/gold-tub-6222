@@ -1,5 +1,7 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Text, Box, Flex} from '@chakra-ui/react'
+import BelowThreeCards from '../Components/Below3Cards'
 import BelowHeader from '../Components/BelowHeader'
+import CalculateYourPrice from '../Components/CalculateYourPrice'
 import Card from '../Components/Card'
 import CrmSuiteHeader from '../Components/CrmSuiteHeader'
 import "./TabsPage.css"
@@ -32,6 +34,8 @@ export default function TabPage(){
                     <Card headOne={"Enterprise"} pOne="$5,000/mo"  p3="$60,000" desc1={"Our marketing, sales, customer service, CMS, and operations software."} tOne="Marketing Hub Enterprise" tTwo={"Starts at 10,000 marketing contacts"} tThree="Sales Hub Enterprise" tFour={"Starts at 10 paid users"} tFive="Service Hub Enterprise" tSix={"Starts at 10 paid users"} disp2="block" gap1={"3%"} ml2="4%" gap2={"5%"} ml3="-6%"
                      gap3={"5%"} ml4="-11%"/>
                     </Flex>
+                    <BelowThreeCards/>
+                    <CalculateYourPrice/>
                 </TabPanel>
                 <TabPanel>
                     <Text fontSize={"xl"}>Tab Two</Text>
