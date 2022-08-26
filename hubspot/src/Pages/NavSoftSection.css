@@ -1,0 +1,65 @@
+.mainb {
+  background-color: #f6f9fc;
+  width: 100%;
+  border-radius: 5px;
+}
+.heading {
+  font-size: 23px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.heading1 {
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.boxstyle {
+  width: 45%;
+  border: 1.5px solid rgb(236, 233, 233);
+  border-radius: 1px;
+  padding: 20px 0px;
+  background-color: #ffffff;
+  color: teal;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.btnlinkbox {
+  width: 60%;
+  margin: auto;
+}
+.cards {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: auto;
+}
+.card {
+  padding: 10px;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid rgb(237, 236, 236);
+}
+.cardhead {
+  font-size: 18px;
+  font-weight: 500;
+}
+.bbox{
+    background-color: white;
+    margin-top: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.cardbottomhead {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgb(237, 236, 236);
+}
+.bottomtext{
+    color: teal;
+    font-weight: 500;
+}
