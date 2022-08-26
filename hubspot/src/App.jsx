@@ -9,6 +9,7 @@ import Login from "./Pages/Login";
 function App() {
   return (
     <Box className="App">
+      <Navbar/>
       <Pricing />
       <Footer />
       <FreeHubSpotCRM />
