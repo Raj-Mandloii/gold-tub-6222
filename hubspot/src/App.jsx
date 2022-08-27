@@ -10,13 +10,13 @@ import OverviewOfAllProducts from "./Components/Software/OverviewOfAllProducts";
 function App() {
   return (
     <Box className="App">
-      <Navbar/>
+      {/* <Navbar/>
       <Pricing />
       <Footer />
       <FreeHubSpotCRM />
-      <OverviewOfAllProducts/>
+      <OverviewOfAllProducts/> */}
       <TabPage />
-      <Login />
+      {/* <Login /> */}
     </Box>
   );
 }

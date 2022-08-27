@@ -9,6 +9,7 @@ import CrmSuiteHeader from '../Components/CrmSuiteHeader'
 import CustomerSupport from '../Components/CustomerSupport'
 import Footer from '../Components/Footer'
 import FrequentlyAskedQue from '../Components/FrequentlyAskedQue'
+import ReacommendedServices from '../Components/RecommendedServices'
 import "./TabsPage.css"
 
 export default function TabPage(){
@@ -50,10 +51,13 @@ export default function TabPage(){
                 </TabPanel>
                 <TabPanel>
                     {/* <Text fontSize={"xl"}>Tab Two</Text> */}
-                    <Box  height="25vh">
+                    <Box  >
                         <CreateABundleHeader/>
                         <CABAfterHeader/>
                     </Box>
+                    {/* Recommended Services */}
+                    <ReacommendedServices/>
+                    <Footer/>
                 </TabPanel>
             </TabPanels>
            
