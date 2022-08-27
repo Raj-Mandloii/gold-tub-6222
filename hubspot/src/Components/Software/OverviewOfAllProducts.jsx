@@ -16,13 +16,22 @@ import logo from "./AllData/LoginLogo.svg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
+import Marketing from "./TabbarComponent2/Marketing";
+import Sales from "./TabbarComponent2/Sales";
+import CustomerService from "./TabbarComponent2/CustomerService";
+import CMS from "./TabbarComponent2/CMS";
+import Operations from "./TabbarComponent2/Operations";
+import FreeTools from "./TabbarComponent2/FreeTools";
 
 const OverviewOfAllProducts = () => {
   const navigate = useNavigate();
   const [status, setStatus] = useState(true);
 
   const handleDemo = () => {
-    navigate("");
+    navigate("/");
+  };
+  const handleLogo = () => {
+    navigate("/");
   };
   const handleScrollButton = () => {
     setStatus(!status);
@@ -34,8 +43,9 @@ const OverviewOfAllProducts = () => {
   };
   return (
     <div className={styles.container}>
-      <Box pt="1px">
+      <Box pt="1px" onClick={handleLogo}>
         <Img
+          cursor={"pointer"}
           width={{ xs: "50px", lg: "180px" }}
           h="1.9rem"
           ml="8rem"
@@ -76,7 +86,7 @@ const OverviewOfAllProducts = () => {
           background={"#FF5C35"}
           py="2.3rem"
           px="7rem"
-          _hover={{ border: "1px solid cyan" }}
+          _hover={{ background: "orange.300" }}
         >
           Get a demo
         </Button>
@@ -97,34 +107,126 @@ const OverviewOfAllProducts = () => {
           <ChevronDownIcon fontSize="35px" mx="-6px" />
         )}
       </Button>
-      <Box my="1.5rem" m='auto' w='80%' border="1px solid red">
-        <Tabs background={'white'} display={"flex"} variant="unstyled">
-          <TabList w='400px' border="1px solid blue">
+      <Box my="1.5rem" m="auto" w="80%">
+        <Tabs display={"flex"} gap="3rem" variant="unstyled">
+          <TabList background={"white"} borderRadius="5px" w="348px">
             <Flex flexDirection={"column"}>
-              <Text fontWeight="600">The CRM platform includes:</Text>
-              <Tab _hover={{background:"azure"}} _selected={{background:"azure"}}>Marketing</Tab>
-              <Tab _hover={{background:"azure"}} _selected={{background:"azure"}}>Sales</Tab>
-              <Tab _hover={{background:"azure"}} _selected={{background:"azure"}}>Customer Service</Tab>
-              <Tab _hover={{background:"azure"}} _selected={{background:"azure"}}>CMS</Tab>
-              <Tab _hover={{background:"azure"}} _selected={{background:"azure"}}>Operation</Tab>
-              <Tab _hover={{background:"azure"}} _selected={{background:"azure"}}>Free Tools</Tab>
+              <Text fontWeight="600" ml="5px" my="10px">
+                The CRM platform includes:
+              </Text>
+              <Tab
+                w="122%"
+                justifyContent="flex-start"
+                _hover={{ background: "cyan.100" }}
+                _selected={{ background: "cyan.100" }}
+              >
+                Marketing
+              </Tab>
+              <Tab
+                w="122%"
+                justifyContent="flex-start"
+                _hover={{ background: "cyan.100" }}
+                _selected={{ background: "cyan.100" }}
+              >
+                Sales
+              </Tab>
+              <Tab
+                w="122%"
+                justifyContent="flex-start"
+                _hover={{ background: "cyan.100" }}
+                _selected={{ background: "cyan.100" }}
+              >
+                Customer Service
+              </Tab>
+              <Tab
+                w="122%"
+                justifyContent="flex-start"
+                _hover={{ background: "cyan.100" }}
+                _selected={{ background: "cyan.100" }}
+              >
+                CMS
+              </Tab>
+              <Tab
+                w="122%"
+                justifyContent="flex-start"
+                _hover={{ background: "cyan.100" }}
+                _selected={{ background: "cyan.100" }}
+              >
+                Operation
+              </Tab>
+              <Tab
+                w="122%"
+                justifyContent="flex-start"
+                _hover={{ background: "cyan.100" }}
+                _selected={{ background: "cyan.100" }}
+              >
+                Free Tools <span className={styles.spanBtn}>FREE</span>
+              </Tab>
             </Flex>
           </TabList>
-          <TabPanels border="1px solid orange">
+          <TabPanels
+            borderShadow="Base"
+            background={"white"}
+            borderRadius="5px"
+          >
             <TabPanel>
-              <p>onel</p>
+              <Box>
+                <Marketing />
+              </Box>
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Box>
+                <Sales />
+              </Box>
             </TabPanel>
             <TabPanel>
-              <p>onel</p>
+              <Box>
+                <CustomerService />
+              </Box>
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Box>
+                <CMS />
+              </Box>
+            </TabPanel>
+            <TabPanel>
+              <Box>
+                <Operations />
+              </Box>
+            </TabPanel>
+            <TabPanel>
+              <Box>
+                <FreeTools />
+              </Box>
             </TabPanel>
           </TabPanels>
         </Tabs>
+      </Box>
+      {/* Footer small */}
+      <Box mt="8rem" h="180px" background={"blue.800"}>
+        <Text pt="3rem" color="white" fontWeight={"600"}>
+          Copyright © 2022 HubSpot, Inc.
+        </Text>
+        <Flex
+          mt="1.5rem"
+          gap="1.5rem"
+          color="whiteAlpha.800"
+          justifyContent={"center"}
+          fontWeight="700"
+        >
+          <a
+            className={styles.anchorTag}
+            href="https://legal.hubspot.com/legal-stuff?hubs_content=www.hubspot.com%25252F&hubs_content-cta=nav-software-platform"
+          >
+            Legal Stuff
+          </a>
+          <a
+            className={styles.anchorTag}
+            href="https://legal.hubspot.com/privacy-policy?hubs_content=www.hubspot.com%25252F&hubs_content-cta=nav-software-platform"
+          >
+            Privacy Policy
+          </a>
+        </Flex>
       </Box>
     </div>
   );

@@ -5,7 +5,7 @@ function App() {
   return (
     <Box className="App">
       <MainRoutes />
-    </Box>
+      </Box>
   );
 }
 

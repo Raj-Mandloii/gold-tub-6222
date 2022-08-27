@@ -1,19 +1,27 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Text, Box, Flex} from '@chakra-ui/react'
 import BelowThreeCards from '../Components/Below3Cards'
 import BelowHeader from '../Components/BelowHeader'
+import CABAfterHeader from '../Components/CABAfterHeader'
 import CalculateYourPrice from '../Components/CalculateYourPrice'
 import Card from '../Components/Card'
+import CreateABundleHeader from '../Components/CreateABundleHeader'
 import CrmSuiteHeader from '../Components/CrmSuiteHeader'
+import CustomerSupport from '../Components/CustomerSupport'
+import Footer from '../Components/Footer'
+import FrequentlyAskedQue from '../Components/FrequentlyAskedQue'
 import "./TabsPage.css"
 
 export default function TabPage(){
 
     return(
         <Tabs>
-            <TabList>
+            <Box className="tabNav"  width="200vh" ml={"2%"} bgColor="white"
+             >
+            <TabList height={"80px"} >
              <Tab className='tab' type='cyan'  margin={"0 0 0 39%"}  >CRM Suite</Tab>
              <Tab className='tab' type='cyan'>Create a Bundle</Tab>
             </TabList>
+            </Box>
             <TabPanels>
                 <TabPanel>
                     {/* <Text fontSize={"xl"}>Tab One</Text> */}
@@ -36,9 +44,16 @@ export default function TabPage(){
                     </Flex>
                     <BelowThreeCards/>
                     <CalculateYourPrice/>
+                    <CustomerSupport/>
+                    <FrequentlyAskedQue/>
+                    <Footer/>
                 </TabPanel>
                 <TabPanel>
-                    <Text fontSize={"xl"}>Tab Two</Text>
+                    {/* <Text fontSize={"xl"}>Tab Two</Text> */}
+                    <Box  height="25vh">
+                        <CreateABundleHeader/>
+                        <CABAfterHeader/>
+                    </Box>
                 </TabPanel>
             </TabPanels>
            
