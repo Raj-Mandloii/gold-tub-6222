@@ -2,7 +2,7 @@ import { CheckCircleIcon } from '@chakra-ui/icons'
 import { Box, HStack, Text } from '@chakra-ui/layout'
 import { Img } from '@chakra-ui/react'
 import React from 'react'
-import { ImgObj } from '../AllData/UrlImgIcon'
+import { hrefObj, ImgObj } from '../AllData/UrlImgIcon'
 import styles from "../CSS/FreeHubSpotCRM.module.css"
 
 const Marketers = () => {
@@ -47,10 +47,10 @@ const Marketers = () => {
           <Box mt='2rem' textAlign='center'>
                 <Text fontSize="14px" fontWeight="600" color="gray.600">FREE FEATURES YOU'LL LOVE</Text>
                 <HStack ml='20%' gap='1rem' mt='1rem' mb='4rem'>
-                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> Reporting dashboard</Box>
-                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> Company insights</Box>
-                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> Deal tracking</Box>
-                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> Pipeline management</Box>
+                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> <a className={styles.anchorTagCRM} href={hrefObj.href1}>Reporting dashboard</a></Box>
+                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> <a className={styles.anchorTagCRM} href={hrefObj.href2}>Company insights</a></Box>
+                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> <a className={styles.anchorTagCRM} href={hrefObj.href3}>Deal tracking</a></Box>
+                    <Box fontWeight='600' color='cyan.800'> <CheckCircleIcon  w={5} h={5} color="orangered" mx='5px' /> <a className={styles.anchorTagCRM} href={hrefObj.href4}>Pipeline management</a></Box>
                 </HStack>
             </Box>
 

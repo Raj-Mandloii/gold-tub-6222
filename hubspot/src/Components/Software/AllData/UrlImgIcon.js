@@ -18,6 +18,12 @@ export const ImgObj={
     CrmLaptop:"https://www.hubspot.com/hubfs/Premium-CRM-Device@2x.png",
     Calendar:"https://www.hubspot.com/hubfs/Sales%20Leader%202@2x-2.png",
     
-    
+}
+export const hrefObj={
+    href1:"https://www.hubspot.com/products/sales/click-to-call?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm",
+    href2:"https://www.hubspot.com/products/sales/deal-pipeline?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm",
+    href3:"https://www.hubspot.com/products/crm/insights?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm",
+    href4:"https://www.hubspot.com/products/sales/deal-tracking?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm",
+
 
 }

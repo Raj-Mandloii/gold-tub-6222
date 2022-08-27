@@ -55,7 +55,7 @@ const FreeHubSpotCRM = () => {
                 it’s 100% free. Here’s how our free CRM solution makes your job
                 easier ...
               </Text>
-              <button className={styles.crmbtn}>Get Free CRM</button>
+              <button  className={styles.crmbtn}>Get Free CRM</button>
             </Box>
             <Box w="50%">
               <Img src={ImgObj.LeaderSpring} alt="leader" w="100%" />
@@ -116,7 +116,7 @@ const FreeHubSpotCRM = () => {
                 operations. Get premium versions of all the free features you
                 see here — and much more!
               </Text>
-              <button className={styles.crmbtn}>Learn more</button>
+              <button className={styles.crmbtn}><a href="https://www.hubspot.com/products/crm/enterprise?hubs_content=www.hubspot.com%2Fproducts%2Fcrm&hubs_content-cta=crmpersona-middle-salesleader">Learn more</a></button>
             </Box>
             <Box w="50%">
               <Img src={ImgObj.CrmLaptop} alt="leader" w="120%" pb="1rem" />
@@ -182,7 +182,7 @@ const FreeHubSpotCRM = () => {
                     color="orangered"
                     mx="5px"
                   />{" "}
-                  Email tracking
+                  <a className={styles.anchorTagCRM} href="https://www.hubspot.com/products/sales/email-tracking?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm">Email tracking</a>
                 </Box>
                 <Box fontWeight="600" color="cyan.800" my="2rem">
                   {" "}
@@ -192,7 +192,7 @@ const FreeHubSpotCRM = () => {
                     color="orangered"
                     mx="5px"
                   />{" "}
-                  Prospect tracking
+                   <a className={styles.anchorTagCRM} href="https://www.hubspot.com/products/sales/email-tracking?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm">Prospect tracking</a>
                 </Box>
                 <Box fontWeight="600" color="cyan.800" my="2rem">
                   {" "}
@@ -202,7 +202,7 @@ const FreeHubSpotCRM = () => {
                     color="orangered"
                     mx="5px"
                   />{" "}
-                  Meeting scheduler
+                   <a className={styles.anchorTagCRM} href="https://www.hubspot.com/products/sales/schedule-meeting?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm">Meeting scheduler</a>
                 </Box>
                 <Box fontWeight="600" color="cyan.800" my="2rem">
                   {" "}
@@ -212,7 +212,7 @@ const FreeHubSpotCRM = () => {
                     color="orangered"
                     mx="5px"
                   />{" "}
-                  Live chat
+                  <a className={styles.anchorTagCRM} href="https://www.hubspot.com/products/sales/schedule-meeting?hubs_content=www.hubspot.com%252F&hubs_content-cta=nav-software-freecrm">Live chat</a>
                 </Box>
               </HStack>
             </Box>

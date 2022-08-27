@@ -1,0 +1,17 @@
+.container{
+    margin:0;
+    padding:0;
+}
+.box1{
+    height:600px;
+    font-family: sans-serif;
+}
+.ProductOverview{
+    display:flex;
+    gap: 10px;
+    font-size: 15px;
+    margin-top: 1rem;
+    margin-left:9rem;
+    font-weight: 500;
+    color: #2E475D;
+}
