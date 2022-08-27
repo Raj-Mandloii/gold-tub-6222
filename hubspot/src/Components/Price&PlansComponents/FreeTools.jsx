@@ -12,9 +12,46 @@ import collar from "../../Assets/collar.png"
 import graph from "../../Assets/graph.png"
 import svgfordiv from "../../Assets/svgfordiv.png"
 import { useState } from 'react'
+import Faq from './FaqComponent';
 export default function FreeTools() {
   const [underline, setUnderline] = useState(false);
   const [link, setLink] = useState(false);
+  const faqArray = [
+    {
+      title: "Are HubSpot's free tools are really free?",
+      desc: `Yes! This is not a free trial. HubSpot’s free tools are 100% free — simple as that. 
+    You can add 1,000,000 contacts, unlimited free users, and your free access has no time limit. 
+    Just be aware that if you use HubSpot’s free CRM tools with Marketing Hub, the contacts you add to your free CRM tools end up in both places, 
+    which could affect your Marketing Hub subscription’s contact tier pricing.`},
+    {
+      title: "What are the limits of free HubSpot account?",
+      desc: `HubSpot’s free tools offer many “lite” versions of select tools featured in our paid products. 
+    There are limits to your free HubSpot account, which differ by feature. Learn more about limits.
+    `},
+    {
+      title: "Does HubSpot's free tools integrate with my email?",
+      desc: `Yes, you can connect HubSpot’s free CRM tools to Gmail, G Suite, and many versions of Outlook.
+    `},
+    {
+      title: "What is user, and how many can I have with my free HubSpot Account?",
+      desc: `You can think of a user as any person who has access to use the HubSpot software. 
+    You can always have unlimited free users, whether or not you decide to upgrade some users to a paid version of Sales Hub or Service Hub. That means even if you upgrade, you only need to pay for the users who need access to paid features — and your other free users will still remain free!
+
+    Paid plans, however, include a set number of paid users that you can increase on a per-user basis.
+    `},
+    {
+      title: "How many contact can I upload into my fee HubSpot account",
+      desc: `You can add up to 1,000,000 contacts to your free HubSpot account. Just be aware that if you use HubSpot’s free CRM tools with Marketing Hub, the contacts you add to your free CRM tools end up in both places, which could affect your Marketing Hub subscription’s contact tier pricing.
+    `},
+    {
+      title: "What type of support are available to free HubSpot users?",
+      desc: `There are several types of support available to free HubSpot CRM users. HubSpot offers support for many languages including English, French, German, Japanese, and Portuguese. For the full list of languages HubSpot supports, view HubSpot’s language offering.
+
+    Free HubSpot users can chat with fellow software users in HubSpot Community, sharpen their skills in HubSpot Academy, and get expert advice on HubSpot tools in the Knowledge Base.
+    
+    `},
+
+  ]
   const data = [
     ["Forms", "Email marketing", "Ad management", "Landing pages", "Shared inbox"],
     ["Live chat", "Basic bots", "Team email", "Customizable quotes", "Email scheduling"],
@@ -120,9 +157,10 @@ export default function FreeTools() {
           w={"100%"}
           backgroundPosition={"center"} bgRepeat={"no-repeat"}
           bgImage={"//static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/bottom-blob.svg"}>
-          <Text mb={"1em"} color={"#33475B"} mt={["6em", "4em", "1em", "0.3em"]} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
+          <Text mb={"1em"} color={"#33475B"} mt={["6em", "4em", "1em", "0.3em"]} 
+          fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
           <br />
-          <Faq />
+          <Faq faqArray={faqArray}/>
 
           <Box display={"flex"} justifyContent={"center"}>
             <Text pr={"3px"} fontSize={"12px"}>
@@ -186,79 +224,4 @@ function InsideText({ content }) {
   )
 }
 
-function Faq() {
-  const faqArray = [
-    {
-      title: "Are HubSpot's free tools are really free?",
-      desc: `Yes! This is not a free trial. HubSpot’s free tools are 100% free — simple as that. 
-    You can add 1,000,000 contacts, unlimited free users, and your free access has no time limit. 
-    Just be aware that if you use HubSpot’s free CRM tools with Marketing Hub, the contacts you add to your free CRM tools end up in both places, 
-    which could affect your Marketing Hub subscription’s contact tier pricing.`},
-    {
-      title: "What are the limits of free HubSpot account?",
-      desc: `HubSpot’s free tools offer many “lite” versions of select tools featured in our paid products. 
-    There are limits to your free HubSpot account, which differ by feature. Learn more about limits.
-    `},
-    {
-      title: "Does HubSpot's free tools integrate with my email?",
-      desc: `Yes, you can connect HubSpot’s free CRM tools to Gmail, G Suite, and many versions of Outlook.
-    `},
-    {
-      title: "What is user, and how many can I have with my free HubSpot Account?",
-      desc: `You can think of a user as any person who has access to use the HubSpot software. 
-    You can always have unlimited free users, whether or not you decide to upgrade some users to a paid version of Sales Hub or Service Hub. That means even if you upgrade, you only need to pay for the users who need access to paid features — and your other free users will still remain free!
 
-    Paid plans, however, include a set number of paid users that you can increase on a per-user basis.
-    `},
-    {
-      title: "How many contact can I upload into my fee HubSpot account",
-      desc: `You can add up to 1,000,000 contacts to your free HubSpot account. Just be aware that if you use HubSpot’s free CRM tools with Marketing Hub, the contacts you add to your free CRM tools end up in both places, which could affect your Marketing Hub subscription’s contact tier pricing.
-    `},
-    {
-      title: "What type of support are available to free HubSpot users?",
-      desc: `There are several types of support available to free HubSpot CRM users. HubSpot offers support for many languages including English, French, German, Japanese, and Portuguese. For the full list of languages HubSpot supports, view HubSpot’s language offering.
-
-    Free HubSpot users can chat with fellow software users in HubSpot Community, sharpen their skills in HubSpot Academy, and get expert advice on HubSpot tools in the Knowledge Base.
-    
-    `},
-
-  ]
-  return (
-    <Box w={["87%", "87%", "87%", "52%"]} m="auto">
-      <Accordion allowToggle>
-        {faqArray.map(item => (
-          <AccordionItem
-            py={["0em", "0em", "0em", "1rem"]}
-            background="white"
-            border="1px solid gray"
-            mb="1rem"
-          >
-            <Text>
-              <AccordionButton>
-                <AccordionIcon color="cyan.600" fontSize="20px" />
-                <Box
-                  ml="1rem"
-                  flex="1"
-                  textAlign="left"
-                  fontWeight="600"
-                  fontSize="12px"
-                >
-                  {item.title}
-                </Box>
-              </AccordionButton>
-            </Text>
-            <AccordionPanel
-              color="gray.600"
-              mx="1.5rem"
-              align="left"
-              pb={4}
-              fontSize={"12px"}
-            >{item.desc}
-            </AccordionPanel>
-          </AccordionItem>
-        ))}
-
-      </Accordion>
-    </Box>
-  )
-}
