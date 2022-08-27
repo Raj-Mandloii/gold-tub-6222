@@ -1,10 +1,22 @@
 import { Box, Flex, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import React from 'react'
 import PriceAndPlans from '../../Pages/Price&Plans'
+import Navbar from '../Navbar'
 
 export default function Pricing() {
+    const mainNav = {
+        position: "sticky",
+        top: "",
+        backgroundColor: "white",
+        zIndex: 1000,
+        marginBottom: "",
+      };
+      const bs = "";
     return (
         <Box >
+            <Box pb="10px">
+                <Navbar s={mainNav} bs={bs} />
+            </Box>
             <Box bgColor={"#00B6AB"} >
                 <Flex w={"100%"} color={"white"} direction={"column"} justifyContent={"center"} h={"auto"}>
                     <Text fontWeight={"bold"} fontSize={["30px", "30px", "30px", "26px"]} >Grow better with the right plan.</Text>
