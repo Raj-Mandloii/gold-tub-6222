@@ -10,7 +10,7 @@ const HomePage = () => {
     top: "-50px",
     backgroundColor: "white",
     zIndex: 1000,
-    marginBottom: "3rem",
+    marginBottom: "",
   };
   const bs = "base";
   return (
