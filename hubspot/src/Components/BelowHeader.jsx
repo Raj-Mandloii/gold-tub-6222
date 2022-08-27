@@ -30,7 +30,7 @@ export default function BelowHeader(){
             </Flex>
             <Flex  m="auto" mt={"1%"} width={"75%"} justify="center" gap={"5%"}>
                 <Text fontWeight={"light"}>Each plan comes with unlimited free users</Text><Icon as={GrCircleInformation}  m="0.7% 0 0 -3%"/> 
-                <Text className="cyanText" color={"cyan.700"} fontWeight="semibold">Calculate your price</Text>
+                <a href="#cyp"><Text className="cyanText" color={"cyan.700"} fontWeight="semibold">Calculate your price</Text></a>
                 <ArrowDownIcon color={"cyan.700"} m="0.8% 0 0 -4.5%" fontWeight={"extrabold"}/>
             </Flex>
             </Box>

@@ -10,10 +10,12 @@ import "./CalculateYourPrice.css"
 
 export default function CalculateYourPrice(){
 
+    
+
     return(
         <Box bgColor={"gray.50"}  color="#33475b">
-            <Text fontSize={"4xl"} fontWeight="bold" color="#33475b">Calculate Your Price</Text>
-            <Text color={"cyan.700"} fontWeight="semibold" textAlign={"right"} mr="5%" mb={"2%"}><ArrowUpIcon/> Back to top</Text>
+            <a id="cyp"><Text fontSize={"4xl"} fontWeight="bold" color="#33475b">Calculate Your Price</Text></a>
+            <a href="#header"><Text  color={"cyan.700"} fontWeight="semibold" textAlign={"right"} mr="5%" mb={"2%"}><ArrowUpIcon/> Back to top</Text></a>
             <Flex>
                 <Box width={"65%"} bgColor="white" border={"1px solid gray"}>
                     <Text textAlign={"left"} fontWeight="semibold" mb={"2%"} mt="2%" ml={"5%"}>Select a CRM Suite plan:</Text>
