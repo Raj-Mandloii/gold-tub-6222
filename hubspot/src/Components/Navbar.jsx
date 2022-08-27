@@ -12,7 +12,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import NavLogo from "../Assets/Hubspotnavlogo.svg";
@@ -23,6 +23,8 @@ import WhyHubspot from "../Assets/WhyHubspot.svg";
 import UserResource from "../Assets/UserResource.svg";
 import "./Navbar.css";
 const Navbar = ({ s, bs }) => {
+  const [mouse, setMouse] = useState(false);
+  const [resources, setResources] = useState(false);
   const btnstyle = {
     backgroundColor: "rgb(255,92,53)",
     color: "white",
@@ -102,10 +104,19 @@ const Navbar = ({ s, bs }) => {
                     <Image src={NavLogo} alt="Hubspot logo" width="100%" />
                   </NavLink>
                 </Box>
-                <Box>
+                <Box
+                  onMouseEnter={() => setMouse(true)}
+                  onMouseLeave={() => setMouse(false)}
+                >
                   <Popover trigger="hover" placement="bottom">
                     <PopoverTrigger>
-                      <Box _hover={hover1} className="bnavLeft">
+                      <Box
+                        _hover={hover1}
+                        className="bnavLeft"
+                        style={
+                          mouse ? { borderBottom: "2px solid teal" } : undefined
+                        }
+                      >
                         <NavLink to="">
                           Software
                           <ChevronDownIcon />
@@ -113,7 +124,10 @@ const Navbar = ({ s, bs }) => {
                       </Box>
                     </PopoverTrigger>
                     <PopoverContent w="73vw" ml="13vw" mt="13px">
-                      <NavSoftSection />
+                      <NavSoftSection
+                        onMouseEnter={() => setMouse(true)}
+                        onMouseLeave={() => setMouse(false)}
+                      />
                     </PopoverContent>
                   </Popover>
                 </Box>
@@ -122,17 +136,34 @@ const Navbar = ({ s, bs }) => {
                     <NavLink to="/Pricing">Pricing</NavLink>
                   </Box>
                 </Box>
-                <Box>
+                <Box
+                  onMouseEnter={() => setResources(true)}
+                  onMouseLeave={() => setResources(false)}
+                >
                   <Popover trigger="hover" placement="bottom">
                     <PopoverTrigger>
-                      <Box _hover={hover1} className="bnavLeft">
+                      <Box
+                        _hover={hover1}
+                        className="bnavLeft"
+                        style={
+                          resources
+                            ? { borderBottom: "2px solid teal" }
+                            : undefined
+                        }
+                      >
                         <NavLink to="">
                           Resources <ChevronDownIcon />
                         </NavLink>
                       </Box>
                     </PopoverTrigger>
-                    <PopoverContent w="90%" p="20px" mt="1px" pb="35px">
-                      <Flex justifyContent="space-between" gap={20} mt="15px">
+                    <PopoverContent w="90%" p="20px" mt="13px" pb="35px">
+                      <Flex
+                        justifyContent="space-between"
+                        gap={20}
+                        mt="15px"
+                        onMouseEnter={() => setResources(true)}
+                        onMouseLeave={() => setResources(false)}
+                      >
                         <Box>
                           <Flex justifyContent="space-between" gap={5}>
                             <Box>

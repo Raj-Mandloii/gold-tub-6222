@@ -16,9 +16,10 @@
 }
 .cardhead {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .tbox {
   color: rgb(33, 51, 67);
   margin-bottom: 2px;
+  font-size: 15px;
 }
