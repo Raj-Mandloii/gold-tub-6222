@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import "./customStyle.css"
 import CustomCards from './CustomCards';
 import Faq from './FaqComponent';
+import Footer from '../Footer';
 
 export const Marketing = () => {
   const [value, setValue] = React.useState(10000)
@@ -376,6 +377,9 @@ export const Marketing = () => {
       <Link fontSize={"md"} color={"#00AFB2"}><Icon color={"black"} mr={2} as={PhoneIcon} />+91 11712-79211</Link>
       </Flex>
      </Flex>
+    <div>
+          <Footer/>
+        </div>
     </Flex>
   )
 }

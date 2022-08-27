@@ -37,16 +37,18 @@ export default function PriceAndPlans() {
                             <Marketing />
                         </TabPanel>
                         <TabPanel bgColor={"white"}>
-                            <p>two!</p>
+                        <FreeTools />
                         </TabPanel>
                         <TabPanel bgColor={"white"}>
-                            <p>two!</p>
+                        
+                        <Marketing />
                         </TabPanel>
                         <TabPanel bgColor={"white"}>
-                            <p>two!</p>
+                        <FreeTools />
                         </TabPanel>
                         <TabPanel bgColor={"white"}>
-                            <p>two!</p>
+                        
+                        <Marketing />
                         </TabPanel>
                     </TabPanels>
                 </Tabs>

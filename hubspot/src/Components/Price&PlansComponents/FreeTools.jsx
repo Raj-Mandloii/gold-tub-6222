@@ -13,6 +13,7 @@ import graph from "../../Assets/graph.png"
 import svgfordiv from "../../Assets/svgfordiv.png"
 import { useState } from 'react'
 import Faq from './FaqComponent';
+import Footer from '../Footer';
 export default function FreeTools() {
   const [underline, setUnderline] = useState(false);
   const [link, setLink] = useState(false);
@@ -181,7 +182,9 @@ export default function FreeTools() {
         Start growing today with HubSpot’s free tools.</Text>
       <Button sx={buttonStyle}>Get started free</Button>
 
-
+      <div>
+          <Footer/>
+        </div>
     </Box>
   )
 }
