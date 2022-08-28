@@ -18,9 +18,9 @@ export default function TabPage(){
         <Box>
         <Tabs>
             
-            <Box className="tabNav"  width="200vh" ml={"2%"} bgColor="white" >
+            <Box className="tabNav"  width="100%" bgColor="white" >
             <TabList   height={"80px"} >
-                <Flex w="18%"   m="auto" justifyContent={"space-evenly"}>
+                <Flex w="15%"   m="auto" justifyContent={"space-evenly"} >
 
                 <Box >
                 <Tab className='tab' type='cyan'>CRM Suite</Tab>
