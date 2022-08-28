@@ -22,6 +22,7 @@ import CustomerService from "./TabbarComponent2/CustomerService";
 import CMS from "./TabbarComponent2/CMS";
 import Operations from "./TabbarComponent2/Operations";
 import FreeTools from "./TabbarComponent2/FreeTools";
+import Navbar from "../Navbar";
 
 const OverviewOfAllProducts = () => {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ const OverviewOfAllProducts = () => {
   };
   return (
     <div className={styles.container}>
+      <Navbar/>
       <Box pt="1px" onClick={handleLogo}>
         <Img
           cursor={"pointer"}
@@ -76,7 +78,7 @@ const OverviewOfAllProducts = () => {
           py="2.3rem"
           px="6rem"
         >
-          Get started free
+           <a href="https://www.hubspot.com/products/marketing/get-started?hubs_content=www.hubspot.com%2F&hubs_content-cta=nav-software-marketing">Get started free</a>
         </Button>
         <Button
           onClick={handleDemo}
