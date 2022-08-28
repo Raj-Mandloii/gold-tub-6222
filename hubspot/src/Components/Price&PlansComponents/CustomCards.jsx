@@ -11,7 +11,7 @@ import { useState } from "react";
 import { CheckIcon } from "@chakra-ui/icons";
 
 export default function CustomCards({ headOne,price,btnContent,defaultValue,marketing1,marketing2,marketing3,belowBtnContent,link,employees}) {
-  console.log(employees);
+
     return (
         <Flex w={"100%"} direction={"column"} >
             <Box border={"1px solid lightgrey"}  minH="75em"  width="100%" padding={"0.3% 0.3% 0% 0.3%"} >
