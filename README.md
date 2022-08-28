@@ -68,7 +68,7 @@ https://clone-hubspot.netlify.app
 
 ### About Project
 
-> We did this project within 5 days in our unit-3 construct week.
+> We did this project within 4 days in our unit-5 construct week.
 We have also add some cool functionality in our software page where 
 you can watch video of our marketing tools ans in our pricing page you can see our subscription fees for different services and user
 can Login to buy the courses.
