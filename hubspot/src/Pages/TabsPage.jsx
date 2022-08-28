@@ -9,6 +9,7 @@ import CrmSuiteHeader from '../Components/CrmSuiteHeader'
 import CustomerSupport from '../Components/CustomerSupport'
 import Footer from '../Components/Footer'
 import FrequentlyAskedQue from '../Components/FrequentlyAskedQue'
+import ReacommendedServices from '../Components/RecommendedServices'
 import "./TabsPage.css"
 
 export default function TabPage(){
