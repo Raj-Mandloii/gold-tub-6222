@@ -48,7 +48,7 @@ const Navbar = ({ s, bs }) => {
           <Flex justifyContent="space-between">
             <Box w="20%">
               <Flex justifyContent="space-between">
-                <Box _hover={hover} border="1px solid white">
+                <Box _hover={hover} >
                   <NavLink to="">
                     Languages <ChevronDownIcon />
                   </NavLink>

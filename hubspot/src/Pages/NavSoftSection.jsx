@@ -22,14 +22,14 @@ const NavSoftSection = () => {
       <Box className="btnlinkbox">
         <Flex justifyContent="space-between">
           <Box className="boxstyle">
-            <Link to="">
+            <NavLink to="/FreeHubSpotCRM">
               Free HubSpot CRM <ArrowForwardIcon />
-            </Link>
+            </NavLink>
           </Box>
           <Box className="boxstyle">
-            <Link to="">
+            <NavLink to="/productoverview">
               Overview of all products <ArrowForwardIcon />
-            </Link>
+            </NavLink>
           </Box>
         </Flex>
       </Box>
@@ -56,6 +56,7 @@ const NavSoftSection = () => {
         </Box>
         </NavLink>
         <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
+        <NavLink to="/Sales">
           <Flex textAlign="left" justifyContent="space-around">
             <Box width="10%">
               <Image src={SalesHub} alt="Sales Hub" width="100%" />
@@ -72,6 +73,7 @@ const NavSoftSection = () => {
               </Text>
             </Box>
           </Flex>
+        </NavLink>
         </Box>
         <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
           <Flex textAlign="left" justifyContent="space-around">
