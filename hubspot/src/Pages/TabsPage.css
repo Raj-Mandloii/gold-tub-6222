@@ -1,6 +1,20 @@
-.tabNav{
+.currencybar {
 
-    position: fixed;
-    
+  position: fixed;
+  z-index: 1;
+  margin-top: 10%;
+}
 
+
+.tabNav {
+  padding: 15px;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  border-color: white;
+  width: 100%;
+  margin: auto;
+
+
+  padding: 0px 10px 0px 10px;
 }

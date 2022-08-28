@@ -2,3 +2,13 @@
   text-align: center;
 }
 
+.pricingTab {
+  /* border: 1px solid red; */
+  padding: 15px;
+  /* padding-left: -10%;
+  padding-right: -10%; */
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+

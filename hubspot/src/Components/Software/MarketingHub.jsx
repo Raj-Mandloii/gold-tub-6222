@@ -1055,11 +1055,11 @@ const MarketingHub = () => {
         </Box>
       </Box>
       {/* Box 6 start here with azure background */}
-      <Box background="azure">
+      <Box  background="azure">
         <Text fontWeight="600" color={"gray.600"} fontSize="26px" pt="3rem">
           Frequently Asked Questions
         </Text>
-        <Flex m="auto" mt={"1.5rem"} w="75%" gap='1.2rem'>
+        <Flex m="auto" mt={"1.5rem"} w="75%" gap='1.2rem'  justifyContent={"space-evenly"}>
           <Box>
             <Accordion allowToggle>
               <AccordionItem

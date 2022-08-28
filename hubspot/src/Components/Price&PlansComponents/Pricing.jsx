@@ -2,7 +2,7 @@ import { Box, Flex, Text, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakr
 import React from 'react'
 import PriceAndPlans from '../../Pages/Price&Plans'
 import Navbar from '../Navbar'
-
+import TabPage from "../../Pages/TabsPage"
 export default function Pricing() {
     const mainNav = {
         position: "sticky",
@@ -37,7 +37,9 @@ export default function Pricing() {
                             <PriceAndPlans/>
                         </TabPanel>
                         <TabPanel  bgColor={"white"}>
-                            <p>two!</p>
+                            <TabPage/>
+                            {/* <p>two!</p> */}
+                            
                         </TabPanel>
                     </TabPanels>
                 </Tabs>

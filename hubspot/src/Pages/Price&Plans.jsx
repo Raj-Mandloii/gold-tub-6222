@@ -13,8 +13,8 @@ export default function PriceAndPlans() {
         <Box >
             <Flex w={"100%"} direction={"row"} justifyContent={"center"}>
                 <Tabs size={"sm"} orientation={["vertical", "vertical", "horizontal", "horizontal"]} w={"100%"} variant='line' colorScheme='gray' >
-                    <Box w={"100%"} boxShadow='2xl' p='6' rounded='md' bg='white'>
-                        <Flex  >
+                    <Box className='pricingTab' w={"100%"} p="6" rounded='md' bg='white'>
+                        <Flex>
                             <TabList  w={"100%"} bgColor={"white"} border={"1px solid white"} justifyContent={"space-evenly"}>
                                 <Box></Box>
                                 <Tab sx={tabStyle} >Free Tools</Tab>

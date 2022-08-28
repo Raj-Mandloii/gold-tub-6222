@@ -221,7 +221,7 @@ const HomePageBody = () => {
                   </Box>
                 </Box>
               </Box>
-              <NavLink to="">
+              <NavLink to="/Marketing">
                 <Button
                   w="90%"
                   bgColor="#FF5C35"
