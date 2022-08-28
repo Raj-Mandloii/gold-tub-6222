@@ -26,13 +26,16 @@ import Customer from "./TabbarComponents/Customer";
 import Operation from "./TabbarComponents/Operation";
 import Business from "./TabbarComponents/Business";
 import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 const FreeHubSpotCRM = () => {
   return (
     <>
       <div className={styles.Container}>
         {/* //add the Navbar */}
-        <div>Navbar</div>
+        <div>
+          <Navbar />
+        </div>
         <Box className={styles.box}>
           <Box  pt='1rem' className={styles.home}>
             <Box> <Link to="/">Home</Link></Box>
