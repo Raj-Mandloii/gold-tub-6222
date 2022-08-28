@@ -3,12 +3,9 @@
 }
 
 .pricingTab {
-  /* border: 1px solid red; */
-  padding: 15px;
-  /* padding-left: -10%;
-  padding-right: -10%; */
+ padding: 15px;
   position: sticky;
   top: 0px;
-  z-index: 1000;
+  z-index: 1;
 }
 
