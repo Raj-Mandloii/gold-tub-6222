@@ -1,5 +1,6 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import { Box, Button, Divider, Flex, Image, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text } from "@chakra-ui/react";
+import CRARightSideComp from "./CRARightSideComp";
 
 export default function CABAfterHeader(){
 
@@ -120,6 +121,7 @@ export default function CABAfterHeader(){
                     </Flex>
                     </Flex>
             </Box>
+            <CRARightSideComp/>
         </Flex>
     )
 
