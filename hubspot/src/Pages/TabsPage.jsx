@@ -9,6 +9,7 @@ import CrmSuiteHeader from '../Components/CrmSuiteHeader'
 import CustomerSupport from '../Components/CustomerSupport'
 import Footer from '../Components/Footer'
 import FrequentlyAskedQue from '../Components/FrequentlyAskedQue'
+import ReacommendedServices from '../Components/RecommendedServices'
 import "./TabsPage.css"
 
 export default function TabPage(){
@@ -25,7 +26,19 @@ export default function TabPage(){
             <TabPanels>
                 <TabPanel>
                     {/* <Text fontSize={"xl"}>Tab One</Text> */}
+                    <Flex className='currencybar' color="rgb(51, 71, 91);" direction={"column"} border="1px solid teal" width={"65px"} height="50vh" bgColor={"white"} ml="-1.2%" borderTopRightRadius={"10px"} borderBottomRightRadius="10px">
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"} bgColor="cyan.200" border={"2px solid cyan"} borderTopRightRadius="10px">
+                            <Text>USD</Text>$</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>EUR</Text>€</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>GPB</Text>£</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>AUS</Text>$</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>JPY</Text>¥</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>SGD</Text>$</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>COP</Text>$</Flex>  
+                          <Flex height={"50px"} justifyContent="center" alignItems={"center"}><Text>CAD</Text>$</Flex>  
+                    </Flex>
                     <Box bgColor={"rgb(245, 248, 250);"} height="50vh">
+                       
                     <CrmSuiteHeader />
                     <BelowHeader/>
                     </Box>
@@ -50,10 +63,24 @@ export default function TabPage(){
                 </TabPanel>
                 <TabPanel>
                     {/* <Text fontSize={"xl"}>Tab Two</Text> */}
-                    <Box  height="25vh">
+                    <Flex className='currencybar' color="rgb(51, 71, 91);" direction={"column"} border="1px solid teal" width={"65px"} height="50vh" bgColor={"white"} ml="-1.2%" borderTopRightRadius={"10px"} borderBottomRightRadius="10px">
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"} bgColor="cyan.200" border={"2px solid cyan"} borderTopRightRadius="10px">
+                            <Text>USD</Text>$</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>EUR</Text>€</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>GPB</Text>£</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>AUS</Text>$</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>JPY</Text>¥</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>SGD</Text>$</Flex>  
+                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>COP</Text>$</Flex>  
+                          <Flex height={"50px"} justifyContent="center" alignItems={"center"}><Text>CAD</Text>$</Flex>  
+                    </Flex>
+                    <Box  >
                         <CreateABundleHeader/>
                         <CABAfterHeader/>
                     </Box>
+                    {/* Recommended Services */}
+                    <ReacommendedServices/>
+                    <Footer/>
                 </TabPanel>
             </TabPanels>
            
