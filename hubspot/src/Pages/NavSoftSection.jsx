@@ -7,6 +7,7 @@ import SalesHub from "../Assets/SalesHub.svg";
 import OperationsHub from "../Assets/OperationsHub.svg";
 import CmsHub from "../Assets/CmsHub.svg";
 import ServiceHub from "../Assets/ServiceHub.svg";
+import { NavLink } from "react-router-dom";
 const NavSoftSection = () => {
   const c = "color.600";
   return (
@@ -33,6 +34,7 @@ const NavSoftSection = () => {
         </Flex>
       </Box>
       <Box className="cards">
+        <NavLink to="/Marketing">
         <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
           <Flex textAlign="left" justifyContent="space-around">
             <Box width="10%">
@@ -52,6 +54,7 @@ const NavSoftSection = () => {
             </Box>
           </Flex>
         </Box>
+        </NavLink>
         <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
           <Flex textAlign="left" justifyContent="space-around">
             <Box width="10%">

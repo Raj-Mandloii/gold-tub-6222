@@ -15,12 +15,24 @@ import "./TabsPage.css"
 export default function TabPage(){
 
     return(
+        <Box>
         <Tabs>
-            <Box className="tabNav"  width="200vh" ml={"2%"} bgColor="white"
-             >
-            <TabList height={"80px"} >
-             <Tab className='tab' type='cyan'  margin={"0 0 0 39%"}  >CRM Suite</Tab>
-             <Tab className='tab' type='cyan'>Create a Bundle</Tab>
+            
+            <Box className="tabNav"  width="200vh" ml={"2%"} bgColor="white" >
+            <TabList   height={"80px"} >
+                <Flex w="18%"   m="auto" justifyContent={"space-evenly"}>
+
+                <Box >
+                <Tab className='tab' type='cyan'>CRM Suite</Tab>
+                </Box>
+
+                <Box  >
+                <Tab className='tab' type='cyan'>Create a Bundle</Tab>
+                </Box>
+
+                </Flex>
+            
+            
             </TabList>
             </Box>
             <TabPanels>
@@ -59,7 +71,7 @@ export default function TabPage(){
                     <CalculateYourPrice/>
                     <CustomerSupport/>
                     <FrequentlyAskedQue/>
-                    <Footer/>
+                    
                 </TabPanel>
                 <TabPanel>
                     {/* <Text fontSize={"xl"}>Tab Two</Text> */}
@@ -80,11 +92,12 @@ export default function TabPage(){
                     </Box>
                     {/* Recommended Services */}
                     <ReacommendedServices/>
-                    <Footer/>
+                   
                 </TabPanel>
             </TabPanels>
-           
         </Tabs>
+            <Footer/>
+        </Box>
     )
 
 }

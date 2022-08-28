@@ -54,7 +54,7 @@ const Navbar = ({ s, bs }) => {
                   </NavLink>
                 </Box>
                 <Box _hover={hover}>
-                  <NavLink to="" style={{ display: "flex" }}>
+                  <NavLink to="/ContactPage" style={{ display: "flex" }}>
                     <HStack>
                       <FaUserAlt />
                       <Text>Contact Sales</Text>
