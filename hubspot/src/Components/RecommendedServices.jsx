@@ -3,6 +3,8 @@ import ServiceComp from "./ServiceComp"
 
 export default function ReacommendedServices(){
 
+    // Reviewed by: ServiceComp can be render using loop, header and loop can be 
+    // passed using an array. It can make view more manageable
     return(
         <Box color="#33475b">
                 <Box  width="60%" ml="6%">
