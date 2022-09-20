@@ -35,7 +35,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
+      // Reviewed for: fw18_0133 - don't include cred in client code
       if (email === "eve.holt@reqres.in" && password === "cityslicka") {
+        // Reviewed for: fw18_0133 - give variabke name like status instead of r
+        // it will be diffcult in case when you debug for any issues
         dispatch(LoginAction({ email, password })).then((r) => {
           if (r.type === LOGIN_SUCCESS) {
             toast({
@@ -48,6 +51,8 @@ const Login = () => {
           }
         });
       } else {
+        // Reviewed for: fw18_0133 - create a util function for such things
+        // that can be shared throughout the project, it will reduce code
         toast({
           title: "Invalid Credentials.",
           description: "Please Check E-Mail & Password",
