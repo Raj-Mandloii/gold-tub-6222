@@ -17,6 +17,10 @@ import Languages from "../Assets/Languages.svg";
 import Social from "../Assets/Social.svg";
 import { NavLink } from "react-router-dom";
 const HomePageBody = () => {
+  
+  // Reviewed for: fp03_303 - these styles should be orgainzed in different folder 
+  // you can keep styles in separate files to keep components light weight
+  // This component is too long to follow, orgainze such componenet into multiple smaller components
   const style = {
     first: {
       height: "650px",
