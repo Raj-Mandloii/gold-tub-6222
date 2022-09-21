@@ -24,6 +24,9 @@ import Operations from "./TabbarComponent2/Operations";
 import FreeTools from "./TabbarComponent2/FreeTools";
 import Navbar from "../Navbar";
 
+// Reviewed for: fw18_0550 - divide the components in smaller components
+// Passing the URLs differently in the view clutters the component
+// Use constant files for URLs, you can use loops for showing same tabs
 const OverviewOfAllProducts = () => {
   const navigate = useNavigate();
   const [status, setStatus] = useState(true);
