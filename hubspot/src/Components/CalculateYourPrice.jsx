@@ -11,7 +11,7 @@ import "./CalculateYourPrice.css"
 export default function CalculateYourPrice(){
 
     
-
+// Reviewed for: fw18_1070 - this looks very big component, you should divide it and and reuse its code
     return(
         <Box bgColor={"gray.50"}  color="#33475b">
             <a id="cyp"><Text fontSize={"4xl"} fontWeight="bold" color="#33475b">Calculate Your Price</Text></a>
