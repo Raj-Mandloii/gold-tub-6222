@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 
+// Reviewed for: fw18_1070 don't use articles in function name
 export default function CreateABundleHeader(){
 
     return(
