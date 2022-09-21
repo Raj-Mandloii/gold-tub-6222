@@ -2,6 +2,10 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 
 import Includes from "./Includes";
 
+// Reviewed for: fw18_1070 - these parameters can be named better or you can use one object named: options
+// You can populate that based on the input
+// this.options = Object.assign(options) - options coming form view
+
 export default function Card({disp1,disp2,headOne,pOne,p2,p3,desc1,tOne,tTwo,tThree,tFour,tFive,tSix,ml,ml2,ml3,ml4,gap1,gap2,gap3}){
 
     return(
