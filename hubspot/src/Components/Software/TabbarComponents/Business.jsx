@@ -5,6 +5,10 @@ import React from 'react'
 import { hrefObj, ImgObj } from '../AllData/UrlImgIcon'
 import styles from "../CSS/FreeHubSpotCRM.module.css"
 
+// Reviewed for: fw18_0550 - all the components in software are almost same expect some text in the box
+// This is the classic example where you can create one TabBar component and multiple config for all the 
+// tabbars like Marketing, Business and customer. Just change the text and only one component can be reused
+// multiple times
 const Business = () => {
   return (
     <div>
