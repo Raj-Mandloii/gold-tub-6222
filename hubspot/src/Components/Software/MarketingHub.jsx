@@ -25,6 +25,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
 import styles from "./CSS/MarketingHub.module.css";
+
+// Reviewed for: fw18_0550 and fw18_0133 - You can reduce imports by creating index.js file
+// and export all these from this index.js file
 import firstImg from "./AllData/MarketingHubFirst.png";
 import icon from "./AllData/MarketingIcon.png";
 import frontify from "./AllData/FrontifyLogo.webp";
@@ -50,6 +53,9 @@ import Kings from "./AllData/KingsLogo.webp";
 import Oakland from "./AllData/OaklandLogo.webp";
 import Navbar from "../Navbar";
 
+
+// Reviewed for: fw18_0550 and fw18_0133 - again these components are too big, has alot of static content and 
+// URLs are directly placed
 const MarketingHub = () => {
   return (
     <Box>
