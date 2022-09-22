@@ -10,6 +10,7 @@ import Includes from "../Includes";
 import { useState } from "react";
 import { CheckIcon } from "@chakra-ui/icons";
 
+// Reviewed for: fw18_0133 - reduce parameters in the component
 export default function CustomCards({ headOne,price,btnContent,defaultValue,marketing1,marketing2,marketing3,belowBtnContent,link,employees}) {
 
     return (
@@ -97,6 +98,7 @@ function BlueText({employees}){
 
 
 
+// Reviewed for: fw18_0133 - remove commented code if not needed
 
 
 // function CustomSwitch(){
