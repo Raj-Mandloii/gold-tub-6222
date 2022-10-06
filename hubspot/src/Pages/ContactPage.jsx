@@ -20,7 +20,7 @@ import bgImg from "../Assets/contactPageBG.webp";
 import callLogo from "../Assets/Calling.png";
 import chatLogo from "../Assets/community.png";
 import dateLogo from "../Assets/Date.png";
-import { Link, NavLink } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 const ContactCard = ({ img, text, width, btnText }) => (
   <VStack
     alignContent={"center"}
@@ -47,6 +47,10 @@ const ContactCard = ({ img, text, width, btnText }) => (
   </VStack>
 );
 const ContactPage = () => {
+  let navigate = useNavigate();
+  const gotoHome = () => {
+    navigate("/");
+  };
   return (
     <Box>
       <Container
@@ -61,6 +65,8 @@ const ContactPage = () => {
             src={SiteLogo}
             alt={"logo"}
             mb={["3rem", "1.5rem", 0, 0]}
+            onClick={() => gotoHome()}
+            cursor="pointer"
           />
           <Text>+91 11 7127 9211</Text>
         </Flex>
