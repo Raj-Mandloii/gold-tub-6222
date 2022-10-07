@@ -3,6 +3,10 @@ import React from "react";
 import { RiFacebookFill, RiLinkedinFill } from "react-icons/ri";
 import { CgInstagram } from "react-icons/cg";
 import { SiYoutube, SiTwitter, SiTiktok } from "react-icons/si";
+
+// Reviewed for: fp03_303 - the view of the footer is very good, but you can organize the component a little better by dividing it into smaller components
+// Use loops for listing same components 
+// URLs should be passed from constant files
 const Footer = () => {
   const white = "white";
   const sm = "sm";

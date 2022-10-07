@@ -4,8 +4,10 @@ import { Image } from "@chakra-ui/image"
 import {List,ListItem,ListIcon,OrderedList,UnorderedList, Button, Icon, } from '@chakra-ui/react'
 import {FiExternalLink} from "react-icons/fi"
 
+// Reviewed for: fw18_1070 - function name is not descriptive
 export default function BelowThreeCards(){
 
+    // Reviewed for: fw18_1070 - You can put static content at one place in constant or JSON file
     return(
             <Box color={"rgb(51, 71, 91)"} mt="5%" mb={"3%"}>
                 <Box  >

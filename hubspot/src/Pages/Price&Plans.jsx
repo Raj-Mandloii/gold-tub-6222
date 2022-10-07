@@ -9,6 +9,8 @@ export default function PriceAndPlans() {
         fontWeight: "600",
     }
 
+    // Reviewed for: fw18_0133 - use loops for same elements rendering
+    // created fontSize object, but didn't use it
     return (
         <Box >
             <Flex w={"100%"} direction={"row"} justifyContent={"center"}>

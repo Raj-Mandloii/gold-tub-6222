@@ -53,6 +53,7 @@ export default function FreeTools() {
     `},
 
   ]
+  
   const data = [
     ["Forms", "Email marketing", "Ad management", "Landing pages", "Shared inbox"],
     ["Live chat", "Basic bots", "Team email", "Customizable quotes", "Email scheduling"],
@@ -87,7 +88,8 @@ export default function FreeTools() {
       </Flex>
       <Button sx={buttonStyle}>Get started free</Button>
       <br />
-      {/* ----------------------     FIVE    DIVS    BELOW    BUTTON    -------------------------------        */}
+      {/* ----------------------     FIVE    DIVS    BELOW    BUTTON    -------------------------------       */} 
+      { /* Reviewed for: fw18_0133 - use loops they are all smae components 
       <Flex alignItems={"center"} w={"100%"} justifyContent={"center"} direction={["column", "column", "column", "row"]}>
         <Divs heading={headings[0]} array={data[0]} />
         <Divs heading={headings[1]} array={data[1]} />

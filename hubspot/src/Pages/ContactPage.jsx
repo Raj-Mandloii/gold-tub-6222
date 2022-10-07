@@ -46,6 +46,10 @@ const ContactCard = ({ img, text, width, btnText }) => (
     <Spacer />
   </VStack>
 );
+
+// Reviewed for: fw18_0474 - this page is quite long, can we break it in smaller components?
+// It will be easy to handle and test as this page or any page grows
+// CSS is only passed as style object to the components
 const ContactPage = () => {
   let navigate = useNavigate();
   const gotoHome = () => {
@@ -214,6 +218,7 @@ const ContactPage = () => {
                 <FormControl isRequired>
                   <FormLabel>Employees</FormLabel>
                   <Select placeholder="Please Select" variant={"filled"}>
+                    // Reviewed for: fw18_0474 - use for loops to show options
                     <option value="1">1</option>
                     <option value="2 to 5">2 to 5</option>
                     <option value="6 to 10">6 to 10</option>
@@ -295,6 +300,7 @@ const ContactPage = () => {
           fontSize="16px"
           fontWeight={"600"}
         >
+            // Reviewed for: fw18_0474 - URLs can be passed form constant file folder
           <a
             target={"_blank"}
             href="https://legal.hubspot.com/legal-stuff?hubs_signup-url=www.hubspot.com%252F&hubs_signup-cta=homepage-nav-contact-sales"

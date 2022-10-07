@@ -9,6 +9,10 @@ import CmsHub from "../Assets/CmsHub.svg";
 import ServiceHub from "../Assets/ServiceHub.svg";
 import { NavLink } from "react-router-dom";
 const NavSoftSection = () => {
+  
+  // Reviewed for: fw18_0133 and fp03_303 - this component a lot same code and you can organize it better
+  // try to avoid writing same code with different configurations insetead create componenet that can take 
+  // dynamic configs and responsed to it
   const c = "color.600";
   return (
     <Box className="mainb">

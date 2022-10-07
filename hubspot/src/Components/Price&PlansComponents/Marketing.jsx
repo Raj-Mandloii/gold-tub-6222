@@ -6,6 +6,8 @@ import CustomCards from './CustomCards';
 import Faq from './FaqComponent';
 import Footer from '../Footer';
 
+// Reviewed for: fw18_0133 - divide such components and you will see how much code can be reused, lot of redundant divs that can be eliminated
+// configs and data orgainzed in a very good way, you should follow this quiet often
 export const Marketing = () => {
   const [value, setValue] = React.useState(10000)
   const handleChange = (value) => {

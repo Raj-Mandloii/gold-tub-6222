@@ -48,6 +48,9 @@ import {
   import Kings from "./AllData/KingsLogo.webp";
   import Oakland from "./AllData/OaklandLogo1.webp";
   import Navbar from "../Navbar";
+
+
+// Reviewed for: fw18_0550 - very very big component
   
   const SalesHub = () => {
     return (

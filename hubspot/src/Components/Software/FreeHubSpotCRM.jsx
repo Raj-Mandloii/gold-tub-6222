@@ -28,6 +28,9 @@ import Business from "./TabbarComponents/Business";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 
+
+// Reviewed for: fw18_0550 - this component is big and you should divide it in the smaller components
+// it will help you write less code and re-use existing functionalities
 const FreeHubSpotCRM = () => {
   return (
     <>
@@ -74,6 +77,7 @@ const FreeHubSpotCRM = () => {
                 color="white"
                 h="4rem"
               >
+                  {/* Reviewed for: fw18_0550 - you can use loops here as you are using same config for tab */}
                 <Tab _selected={{ bg: "gray.400" }}>Sales Leaders</Tab>
                 <Tab _selected={{ bg: "gray.400" }}>Salespeople</Tab>
                 <Tab _selected={{ bg: "gray.400" }}>Marketers</Tab>
@@ -82,6 +86,7 @@ const FreeHubSpotCRM = () => {
                 <Tab _selected={{ bg: "gray.400" }}>Business Owners</Tab>
               </TabList>
               <TabPanels align="center">
+               {/* Reviewed for: fw18_0550 - think of out of box, how you can make this tab-panel dynamic i.e how you can pass components names to a new component that can help render the same view */}
                 <TabPanel>
                   <SalesLeaders />
                 </TabPanel>
@@ -307,6 +312,7 @@ const FreeHubSpotCRM = () => {
                   align="left"
                   pb={4}
                 >
+                  {/* Reviewed for: fw18_0550 - try to keep big texts in JSON or JS files to keep view clean */}
                   CRM stands for “customer relationship management.” Customer
                   relationship management software is a powerful tool that helps
                   businesses organize and manage their customer relationships on
