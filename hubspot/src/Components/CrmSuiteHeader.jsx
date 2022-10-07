@@ -6,8 +6,8 @@ export default function CrmSuiteHeader(){
         <Box>
             <a id="header">
             <Box>
-                <Text fontSize={"4xl"} fontWeight={"semibold"} color="rgb(51, 71, 91);" m={"5% 0 0 0"}>CRM Suite</Text>
-                <Text fontWeight={"light"} color="rgb(51, 71, 91);">Includes free tools, plus:</Text>
+                <Text fontSize={{base:"xl",md:"2xl",lg:"4xl"}} fontWeight={"semibold"} color="rgb(51, 71, 91);" m={"5% 0 0 0"}>CRM Suite</Text>
+                <Text fontSize={{base:"x-small",md:"small",lg:"md"}} fontWeight={"light"} color="rgb(51, 71, 91);">Includes free tools, plus:</Text>
             </Box>
             </a>
         </Box>
