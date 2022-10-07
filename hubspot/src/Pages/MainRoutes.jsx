@@ -8,6 +8,7 @@ import MarketingHub from "../Components/Software/MarketingHub";
 import FreeHubSpotCRM from "../Components/Software/FreeHubSpotCRM";
 import OverviewOfAllProducts from "../Components/Software/OverviewOfAllProducts";
 import SalesHub from "../Components/Software/SalesHub";
+import SignUp from "./SignUp";
 
 const MainRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const MainRoutes = () => {
       <Route path="/FreeHubSpotCRM" element={ <FreeHubSpotCRM/>} />
       <Route path="/productoverview" element={ <OverviewOfAllProducts/>} />
       <Route path="/Sales" element={ <SalesHub/>} />
+      <Route path="/signup" element={<SignUp />}/>
     </Routes>
   );
 };

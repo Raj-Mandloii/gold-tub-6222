@@ -22,9 +22,12 @@ import Services from "../Assets/Services.svg";
 import WhyHubspot from "../Assets/WhyHubspot.svg";
 import UserResource from "../Assets/UserResource.svg";
 import "./Navbar.css";
+import { useSelector } from "react-redux";
 const Navbar = ({ s, bs }) => {
   const [mouse, setMouse] = useState(false);
   const [resources, setResources] = useState(false);
+  const isAuth = useSelector(store => store.isAuth);
+  console.log(isAuth);
   const btnstyle = {
     backgroundColor: "rgb(255,92,53)",
     color: "white",
@@ -75,7 +78,7 @@ const Navbar = ({ s, bs }) => {
                   </NavLink>
                 </Box>
                 <Box _hover={hover}>
-                  <NavLink to="/login">Log in</NavLink>
+                  <NavLink to="/login">{isAuth ? 'Log Out':'Log in'}</NavLink>
                 </Box>
                 <Box _hover={hover}>
                   <NavLink to="">Customer Support</NavLink>

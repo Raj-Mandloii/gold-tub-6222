@@ -6,7 +6,6 @@ import {
   FormLabel,
   Image,
   Input,
-  InputGroup,
   Stack,
   Text,
   useToast,
@@ -17,7 +16,7 @@ import LoginPage from "../Assets/LoginLogo.svg";
 import { useDispatch } from "react-redux/";
 import { LoginAction } from "../Reducer/AuthReducer/action";
 import { LOGIN_SUCCESS } from "../Reducer/AuthReducer/actionType";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const toast = useToast();
@@ -39,9 +38,10 @@ const Login = () => {
         dispatch(LoginAction({ email, password })).then((r) => {
           if (r.type === LOGIN_SUCCESS) {
             toast({
+              position: "bottom-right",
               title: "Login Success",
               status: "success",
-              duration: 1000,
+              duration: 2000,
               isClosable: true,
             });
             navigate("/");
@@ -49,6 +49,7 @@ const Login = () => {
         });
       } else {
         toast({
+          position: "bottom-right",
           title: "Invalid Credentials.",
           description: "Please Check E-Mail & Password",
           status: "error",
@@ -58,10 +59,32 @@ const Login = () => {
       }
     }
   };
+  const gotoHome = () => {
+    navigate("/");
+  };
 
   return (
     <Box display={"flex"} flexDirection="column" alignItems={"center"}>
-      <Image width={{ xs: "50px", lg: "180px" }} my="2.5rem" src={LoginPage} />
+      <Box my="2.5rem">
+        <Image
+          width={["150px", "230px"]}
+          src={LoginPage}
+          onClick={() => gotoHome()}
+          cursor="pointer"
+        />
+        <Text
+          textAlign={"center"}
+          fontWeight={["0", "100"]}
+          fontSize={["14px", "18px"]}
+          color={"#33475b"}
+          my={[4, 2]}
+        >
+          Don't have an account?{" "}
+          <Link to="/signup" style={{ color: "#0091AE" }}>
+            Sign up
+          </Link>
+        </Text>
+      </Box>
       <form onSubmit={handleSubmit}>
         <VStack direction={["column", "row"]}>
           <Box my="1rem">
@@ -102,7 +125,7 @@ const Login = () => {
             </FormControl>
           </Box>
           <Box py="0.5rem">
-            <FormControl isRequired>
+            <FormControl>
               <Checkbox size={"lg"}>Remember me</Checkbox>
             </FormControl>
           </Box>

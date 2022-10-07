@@ -1,4 +1,3 @@
-import { LoginAction } from "./action";
 import * as types from "./actionType";
 const initState = {
   isAuth: false,
