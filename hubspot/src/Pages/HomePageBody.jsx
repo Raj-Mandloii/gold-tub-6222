@@ -16,80 +16,8 @@ import inbound from "../Assets/inbound.svg";
 import Languages from "../Assets/Languages.svg";
 import Social from "../Assets/Social.svg";
 import { NavLink } from "react-router-dom";
+import style from "./style.json"
 const HomePageBody = () => {
-  const style = {
-    first: {
-      height: "650px",
-    },
-    btn: {
-      color: "rgb(62,89,116)",
-      width: "50%",
-      padding: "2rem",
-      backgroundColor: "white",
-      fontWeight: 700,
-      fontSize: "20px",
-      marginBottom: "30px",
-    },
-    sec: {
-      width: "85%",
-      marginLeft: "7%",
-      alignItems: "center",
-      paddingTop: "7%",
-    },
-    flex: {
-      justifyContent: "space-between",
-      alignItems: "center",
-    },
-    third: {
-      color: "white",
-      textAlign: "left",
-      width: "45%",
-    },
-    four: {
-      width: "90%",
-      fontWeight: 600,
-      marginTop: "40px",
-      marginBottom: "30px",
-    },
-    five: {
-      width: "45%",
-      fontWeight: 600,
-    },
-  };
-
-  const style2 = {
-    tcolor: {
-      color: "#2E475D",
-      textAlign: "center",
-    },
-    text: {
-      color: "#2E475D",
-      textAlign: "left",
-      margin: "auto",
-      width: "50%",
-      marginTop: "3rem",
-    },
-    btnbox: {
-      margin: "auto",
-      textAlign: "center",
-      width: "30%",
-      justifyContent: "space-between",
-      marginTop: "1.5rem",
-      marginBottom: "2.5rem",
-      btn1: {
-        backgroundColor: "#FF5C35",
-        color: "white",
-        width: "40%",
-        borderRadius: "2px",
-      },
-      btn2: {
-        borderColor: "#FF5C35",
-        color: "#FF5C35",
-        width: "50%",
-        borderRadius: "2px",
-      },
-    },
-  };
 
   const hover = {
     color: "#FF5C35",
@@ -97,10 +25,14 @@ const HomePageBody = () => {
     backgroundColor: "white",
   };
   return (
-    <Box>
-      <Box bgColor="rgb(62,89,116)" p="15px">
-        <Box w="60%" m="auto">
-          <Flex justifyContent="space-between" alignItems="center">
+    <Box size={["xs", "sm", "md", "lg"]}>
+      <Box bgColor="rgb(62,89,116)" p="15px" display={["none", "none", "none","block"]}>
+        <Box w={["90%","80%","70","60%"]} m="auto">
+          <Flex
+            justifyContent="space-between"
+            alignItems="center"
+            direction={["column", "column", "row"]}
+          >
             <Text color="white">
               Tickets for INBOUND 2022 are on sale now. Join us online or in
               person in Boston, MA on September 6-9.
@@ -113,11 +45,11 @@ const HomePageBody = () => {
       </Box>
       <Box style={style.first} bgGradient="linear(to-r, #D44325, #FF5C35)">
         <Box style={style.sec}>
-          <Flex style={style.flex}>
-            <Box style={style.third}>
+          <Flex style={style.flex} direction={["column","column","column","row"]}>
+            <Box style={style.third} w={["90%","90%","45%"]}>
               <Text fontWeight="600">HUBSPOT CRM PLATFORM</Text>
               <Box>
-                <Heading size="2xl" mt="20px">
+                <Heading size={["xl","xl","2xl"]} mt="20px">
                   Powerful,
                   <br /> not overpowering
                 </Heading>
@@ -144,12 +76,12 @@ const HomePageBody = () => {
         </Box>
       </Box>
       <Box bgColor="#F6F9FC">
-        <Box style={style2.tcolor}>
+        <Box style={style.style2.tcolor}>
           <Heading size="lg" pt="4rem">
             The CRM Platform Your Whole Business Will Love
           </Heading>
         </Box>
-        <Box style={style2.text}>
+        <Box style={style.style2.text}>
           <Text>
             HubSpot's CRM platform has all the tools and integrations you need
             for marketing, sales, content management, and customer service. Each
@@ -157,10 +89,10 @@ const HomePageBody = () => {
             happens when you use them together.
           </Text>
         </Box>
-        <Flex style={style2.btnbox}>
-          <Button style={style2.btnbox.btn1}>Get free CRM</Button>
+        <Flex style={style.style2.btnbox}>
+          <Button style={style.style2.btnbox.btn1}>Get free CRM</Button>
           <Button
-            style={style2.btnbox.btn2}
+            style={style.style2.btnbox.btn2}
             variant="outline"
             colorScheme="white"
           >
@@ -179,7 +111,7 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={Marketing} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text fontSize="26px" fontWeight="600" style={style.style2.tcolor}>
                   Marketing Hub
                 </Text>
               </Flex>
@@ -246,7 +178,7 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={SalesHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text fontSize="26px" fontWeight="600" style={style.style2.tcolor}>
                   Sales Hub
                 </Text>
               </Flex>
@@ -313,7 +245,7 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={ServiceHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text fontSize="26px" fontWeight="600" style={style.style2.tcolor}>
                   Service Hub
                 </Text>
               </Flex>
@@ -380,7 +312,7 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={CmsHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text fontSize="26px" fontWeight="600" style={style.style2.tcolor}>
                   CMS Hub
                 </Text>
               </Flex>
@@ -447,7 +379,7 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={OperationsHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text fontSize="26px" fontWeight="600" style={style.style2.tcolor}>
                   Operations Hub
                 </Text>
               </Flex>
