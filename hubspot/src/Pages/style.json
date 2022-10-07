@@ -1,10 +1,6 @@
 {
-    "first": {
-      "height": "650px"
-    },
     "btn": {
       "color": "rgb(62,89,116)",
-      "width": "50%",
       "padding": "2rem",
       "backgroundColor": "white",
       "fontWeight": 700,
@@ -26,44 +22,36 @@
         "textAlign": "left"
       },
       "four": {
-        "width": "90%",
         "fontWeight": 600,
         "marginTop": "40px",
         "marginBottom": "30px"
       },
       "five": {
-        "width": "45%",
         "fontWeight": 600
       },
       "style2":{
         "tcolor": {
-            "color": "#2E475D",
-            "textAlign": "center"
+            "color": "#2E475D"
           },
           "text": {
             "color": "#2E475D",
             "textAlign": "left",
-            "margin": "auto",
-            "width": "50%",
-            "marginTop": "3rem"
+            "margin": "auto"
           },
           "btnbox": {
             "margin": "auto",
             "textAlign": "center",
-            "width": "30%",
             "justifyContent": "space-between",
             "marginTop": "1.5rem",
             "marginBottom": "2.5rem",
             "btn1": {
               "backgroundColor": "#FF5C35",
               "color": "white",
-              "width": "40%",
               "borderRadius": "2px"
             },
             "btn2": {
               "borderColor": "#FF5C35",
               "color": "#FF5C35",
-              "width": "50%",
               "borderRadius": "2px"
             }
           }
