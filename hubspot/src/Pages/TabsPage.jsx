@@ -1,4 +1,4 @@
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Text, Box, Flex} from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel,Box, Flex} from '@chakra-ui/react'
 import BelowThreeCards from '../Components/Below3Cards'
 import BelowHeader from '../Components/BelowHeader'
 import CABAfterHeader from '../Components/CABAfterHeader'
