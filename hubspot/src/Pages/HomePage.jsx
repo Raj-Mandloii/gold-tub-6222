@@ -15,7 +15,7 @@ const HomePage = () => {
   const bs = "base";
   return (
     <Box>
-      <Navbar s={mainNav} bs={bs} />
+      {/* <Navbar s={mainNav} bs={bs} /> */}
       <HomePageBody />
       <Footer />
     </Box>
