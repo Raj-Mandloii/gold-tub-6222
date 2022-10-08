@@ -16,7 +16,7 @@ import inbound from "../Assets/inbound.svg";
 import Languages from "../Assets/Languages.svg";
 import Social from "../Assets/Social.svg";
 import { NavLink } from "react-router-dom";
-import style from "./style.json";
+import style from "./homepagebody_style.json";
 const HomePageBody = () => {
   const hover = {
     color: "#FF5C35",
