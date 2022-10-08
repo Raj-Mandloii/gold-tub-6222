@@ -25,7 +25,6 @@ const reducer = (oldState = initState, action) => {
     case types.LOGIN_FAILED:
       return {
         isAuth: false,
-
         isLoading: false,
         ...oldState,
         isError: true,

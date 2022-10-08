@@ -13,7 +13,6 @@ import Customers from "../Assets/Customers.svg";
 import hubSpotBlog from "../Assets/hubSpotBlog.svg";
 import hubSpotAc from "../Assets/hubSpotAc.svg";
 import inbound from "../Assets/inbound.svg";
-import Languages from "../Assets/Languages.svg";
 import Social from "../Assets/Social.svg";
 import { NavLink } from "react-router-dom";
 import style from "./homepagebody_style.json";
@@ -523,7 +522,7 @@ const HomePageBody = () => {
             textAlign="center"
             color="white"
             m="auto"
-            mt={["1rem","2rem","3rem","5rem"]}
+            mt={["1rem", "2rem", "3rem", "5rem"]}
             pb="5.5rem"
           >
             <Flex direction={["column", "column", "row"]}>
@@ -590,14 +589,14 @@ const HomePageBody = () => {
                 <Box mb="10px">
                   <Heading size="xl">70K</Heading>
                 </Box>
-                <Text mb={["10px","20px","25px"]}>registered attendees</Text>
+                <Text mb={["10px", "20px", "25px"]}>registered attendees</Text>
               </Box>
             </Flex>
             <Flex direction={["column", "column", "row"]}>
               <Box
                 w={["100%", "100%", "25%"]}
-                borderRight={["none","none","1.5px solid white"]}
-                pt={["10px","15px","20px"]}
+                borderRight={["none", "none", "1.5px solid white"]}
+                pt={["10px", "15px", "20px"]}
                 pb="20px"
               >
                 <Box mb="10px" pt="30px">
@@ -613,7 +612,7 @@ const HomePageBody = () => {
               </Box>
               <Box
                 w={["100%", "100%", "25%"]}
-                borderRight={["none","none","1.5px solid white"]}
+                borderRight={["none", "none", "1.5px solid white"]}
                 pt="20px"
               >
                 <Box mb="10px" pt="30px">
@@ -629,7 +628,7 @@ const HomePageBody = () => {
               </Box>
               <Box
                 w={["100%", "100%", "25%"]}
-                borderRight={["none","none","1.5px solid white"]}
+                borderRight={["none", "none", "1.5px solid white"]}
                 pt="20px"
               >
                 <Box mb="10px" pt="30px">
@@ -648,7 +647,7 @@ const HomePageBody = () => {
                   <Image src={Customers} m="auto" />
                 </Box>
                 <Box mb="15px">
-                  <Flex ml={["30%","30%","25%"]}>
+                  <Flex ml={["30%", "30%", "25%"]}>
                     <Heading size="xl">150,000</Heading>
                     <GoPlusSmall />
                   </Flex>

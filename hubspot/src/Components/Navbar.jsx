@@ -8,7 +8,7 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  Heading,
+  
   Link,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
