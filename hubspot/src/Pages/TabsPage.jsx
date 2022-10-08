@@ -6,6 +6,7 @@ import CalculateYourPrice from '../Components/CalculateYourPrice'
 import Card from '../Components/Card'
 import CreateABundleHeader from '../Components/CreateABundleHeader'
 import CrmSuiteHeader from '../Components/CrmSuiteHeader'
+import CurrencyBar from '../Components/CurrencyBar'
 import CustomerSupport from '../Components/CustomerSupport'
 import Footer from '../Components/Footer'
 import FrequentlyAskedQue from '../Components/FrequentlyAskedQue'
@@ -38,17 +39,7 @@ export default function TabPage(){
             <TabPanels>
                 <TabPanel>
                     {/* <Text fontSize={"xl"}>Tab One</Text> */}
-                    <Flex className='currencybar' color="rgb(51, 71, 91);" direction={"column"} border="1px solid teal" width={"65px"} height="50vh" bgColor={"white"} ml="-1.2%" borderTopRightRadius={"10px"} borderBottomRightRadius="10px">
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"} bgColor="cyan.200" border={"2px solid cyan"} borderTopRightRadius="10px">
-                            <Text>USD</Text>$</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>EUR</Text>€</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>GPB</Text>£</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>AUS</Text>$</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>JPY</Text>¥</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>SGD</Text>$</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>COP</Text>$</Flex>  
-                          <Flex height={"50px"} justifyContent="center" alignItems={"center"}><Text>CAD</Text>$</Flex>  
-                    </Flex>
+                    <CurrencyBar/>
                     <Box bgColor={"rgb(245, 248, 250);"} height={{base:"28vh",md:"30vh",lg:"50vh"}}>
                        
                     <CrmSuiteHeader />
@@ -75,17 +66,7 @@ export default function TabPage(){
                 </TabPanel>
                 <TabPanel>
                     {/* <Text fontSize={"xl"}>Tab Two</Text> */}
-                    <Flex className='currencybar' color="rgb(51, 71, 91);" direction={"column"} border="1px solid teal" width={"65px"} height="50vh" bgColor={"white"} ml="-1.2%" borderTopRightRadius={"10px"} borderBottomRightRadius="10px">
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"} bgColor="cyan.200" border={"2px solid cyan"} borderTopRightRadius="10px">
-                            <Text>USD</Text>$</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>EUR</Text>€</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>GPB</Text>£</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>AUS</Text>$</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>JPY</Text>¥</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>SGD</Text>$</Flex>  
-                          <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>COP</Text>$</Flex>  
-                          <Flex height={"50px"} justifyContent="center" alignItems={"center"}><Text>CAD</Text>$</Flex>  
-                    </Flex>
+                    <CurrencyBar/>
                     <Box  >
                         <CreateABundleHeader/>
                         <CABAfterHeader/>

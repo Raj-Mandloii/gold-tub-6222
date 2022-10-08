@@ -8,15 +8,15 @@ export default function CRARightSideComp(){
     return(
 
         <Box  borderTop="2px solid cyan" ml={["-2%","0","0"]} width={["100%","35%","35%"]} boxShadow={"base"} height={["184vh","150vh","184vh"]}>
-            <Box  width={["90%","100%","75%"]} ml={["3%","5%","15%"]} mt={"4%"} >
-            <Flex  height={["50px","100%","50px"]} bgColor={"gray.300"} m="auto" 
+            <Box  width={{base:"90%",md:"100%",lg:"75%"}} ml={{base:"3%",md:"5%",lg:"15%"}} mt={"4%"} >
+            <Flex  height={{base:"50px",md:"65px",lg:"50px"}} bgColor={"gray.300"} m="auto" 
              borderRadius={"25px"}>
-                <Box  ml="5%" height={["50px","75px","50px"]} width={"50%"} >
+                <Box  ml="5%"  width={"50%"} >
                 <Text fontSize={["x-small","x-small","small"]} fontWeight={"semibold"} color="rgb(51, 71, 91)" mt={["5%","0","5%"]} width="100%" >Pay Monthly</Text>
                 <Text color="rgb(51, 71, 91)" fontSize={["x-small","smaller","small"]} fontWeight="light">Commit Annually</Text>
                 </Box>
-                <Box width="65%" height={["50px","75px","50px"]} ml={"15%"} backgroundColor="white" border={"1px solid teal"}  borderRadius={"25px"}>
-                <Text fontSize={["x-small","x-small","small"]} fontWeight={"semibold"} color="rgb(51, 71, 91)" mt={"4%"}>Pay Upfront</Text>
+                <Box width="65%" height={{base:"50px",md:"65px",lg:"50px"}} ml={"15%"} backgroundColor="white" border={"1px solid teal"}  borderRadius={"25px"}>
+                <Text fontSize={["x-small","x-small","small"]} fontWeight={"semibold"} color="rgb(51, 71, 91)" mt={"5%"}>Pay Upfront</Text>
                 <Text color="rgb(51, 71, 91)" fontSize={["x-small","x-small","small"]} fontWeight="light">Commit Annually</Text>
                 </Box>
             </Flex>
