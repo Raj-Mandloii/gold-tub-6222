@@ -16,91 +16,26 @@ import inbound from "../Assets/inbound.svg";
 import Languages from "../Assets/Languages.svg";
 import Social from "../Assets/Social.svg";
 import { NavLink } from "react-router-dom";
+import style from "./style.json";
 const HomePageBody = () => {
-  const style = {
-    first: {
-      height: "650px",
-    },
-    btn: {
-      color: "rgb(62,89,116)",
-      width: "50%",
-      padding: "2rem",
-      backgroundColor: "white",
-      fontWeight: 700,
-      fontSize: "20px",
-      marginBottom: "30px",
-    },
-    sec: {
-      width: "85%",
-      marginLeft: "7%",
-      alignItems: "center",
-      paddingTop: "7%",
-    },
-    flex: {
-      justifyContent: "space-between",
-      alignItems: "center",
-    },
-    third: {
-      color: "white",
-      textAlign: "left",
-      width: "45%",
-    },
-    four: {
-      width: "90%",
-      fontWeight: 600,
-      marginTop: "40px",
-      marginBottom: "30px",
-    },
-    five: {
-      width: "45%",
-      fontWeight: 600,
-    },
-  };
-
-  const style2 = {
-    tcolor: {
-      color: "#2E475D",
-      textAlign: "center",
-    },
-    text: {
-      color: "#2E475D",
-      textAlign: "left",
-      margin: "auto",
-      width: "50%",
-      marginTop: "3rem",
-    },
-    btnbox: {
-      margin: "auto",
-      textAlign: "center",
-      width: "30%",
-      justifyContent: "space-between",
-      marginTop: "1.5rem",
-      marginBottom: "2.5rem",
-      btn1: {
-        backgroundColor: "#FF5C35",
-        color: "white",
-        width: "40%",
-        borderRadius: "2px",
-      },
-      btn2: {
-        borderColor: "#FF5C35",
-        color: "#FF5C35",
-        width: "50%",
-        borderRadius: "2px",
-      },
-    },
-  };
-
   const hover = {
     color: "#FF5C35",
     border: "1px solid #FF5C35",
     backgroundColor: "white",
   };
   return (
-    <Box>
-      <Box bgColor="rgb(62,89,116)" p="15px">
-        <Box w="60%" m="auto">
-          <Flex justifyContent="space-between" alignItems="center">
+    <Box size={["xs", "sm", "md", "lg"]}>
+      <Box
+        bgColor="rgb(62,89,116)"
+        p="15px"
+        display={["none", "none", "none", "block"]}
+      >
+        <Box w={["90%", "80%", "70", "60%"]} m="auto">
+          <Flex
+            justifyContent="space-between"
+            alignItems="center"
+            direction={["column", "column", "row"]}
+          >
             <Text color="white">
               Tickets for INBOUND 2022 are on sale now. Join us online or in
               person in Boston, MA on September 6-9.
@@ -111,45 +46,69 @@ const HomePageBody = () => {
           </Flex>
         </Box>
       </Box>
-      <Box style={style.first} bgGradient="linear(to-r, #D44325, #FF5C35)">
+      <Box
+        pb={["10", "20", "30", "120"]}
+        bgGradient="linear(to-r, #D44325, #FF5C35)"
+      >
         <Box style={style.sec}>
-          <Flex style={style.flex}>
-            <Box style={style.third}>
+          <Flex
+            style={style.flex}
+            direction={["column", "column", "column", "row"]}
+          >
+            <Box
+              style={style.third}
+              w={["90%", "90%", "45%"]}
+              mt={["30px", "30px", "none", "none"]}
+            >
               <Text fontWeight="600">HUBSPOT CRM PLATFORM</Text>
               <Box>
-                <Heading size="2xl" mt="20px">
+                <Heading size={["xl", "xl", "2xl"]} mt="20px">
                   Powerful,
                   <br /> not overpowering
                 </Heading>
               </Box>
-              <Box style={style.four}>
+              <Box style={style.four} w={["95%", "95%", "90%", "90%"]}>
                 <Text>
                   Finally, a CRM platform that's both powerful and easy to use.
                   Create delightful customer experiences. Have a delightful time
                   doing it.
                 </Text>
               </Box>
-              <Button style={style.btn}>Start free or get a demo</Button>
-              <Box style={style.five}>
+              <Button style={style.btn} w={["90%", "90%", "50%"]}>
+                Start free or get a demo
+              </Button>
+              <Box style={style.five} w={["95%", "95%", "45%%"]}>
                 <Text>
                   Get started with free tools, or get more with our premium
                   software.
                 </Text>
               </Box>
             </Box>
-            <Box w="55%">
-              <Image src={First} />
+            <Box
+              w={["90%", "90%", "55%"]}
+              mt={["30px", "30px", "30px", "none"]}
+            >
+              <Image src={First} w="100%" />
             </Box>
           </Flex>
         </Box>
       </Box>
       <Box bgColor="#F6F9FC">
-        <Box style={style2.tcolor}>
+        <Box
+          style={style.style2.tcolor}
+          textAlign={["left", "left", "center"]}
+          w={["90%", "90%", "90%", "none"]}
+          m={["auto", "auto", "auto", "none"]}
+        >
           <Heading size="lg" pt="4rem">
             The CRM Platform Your Whole Business Will Love
           </Heading>
         </Box>
-        <Box style={style2.text}>
+        <Box
+          style={style.style2.text}
+          w={["90%", "90%", "45%"]}
+          mt={["1rem", "1rem", "2rem", "3rem"]}
+        >
           <Text>
             HubSpot's CRM platform has all the tools and integrations you need
             for marketing, sales, content management, and customer service. Each
@@ -157,17 +116,30 @@ const HomePageBody = () => {
             happens when you use them together.
           </Text>
         </Box>
-        <Flex style={style2.btnbox}>
-          <Button style={style2.btnbox.btn1}>Get free CRM</Button>
+        <Flex
+          style={style.style2.btnbox}
+          display={["column", "column", "row"]}
+          w={["90%", "90%", "30%"]}
+        >
+          <Button style={style.style2.btnbox.btn1} w={["100%", "100%", "40%"]}>
+            Get free CRM
+          </Button>
           <Button
-            style={style2.btnbox.btn2}
+            style={style.style2.btnbox.btn2}
             variant="outline"
             colorScheme="white"
+            w={["100%", "100%", "50%"]}
+            mt={["20px", "20px", "0"]}
           >
             Demo premium CRM
           </Button>
         </Flex>
-        <Box w="70%" className="cards" pb="4rem">
+        <Flex
+          w={["90%", "90%", "70%"]}
+          className="cards"
+          direction={["column", "column", "row"]}
+          mb="2rem"
+        >
           <Box
             borderRadius="3px"
             boxShadow="sm"
@@ -179,7 +151,11 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={Marketing} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text
+                  fontSize="26px"
+                  fontWeight="600"
+                  style={style.style2.tcolor}
+                >
                   Marketing Hub
                 </Text>
               </Flex>
@@ -246,7 +222,11 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={SalesHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text
+                  fontSize="26px"
+                  fontWeight="600"
+                  style={style.style2.tcolor}
+                >
                   Sales Hub
                 </Text>
               </Flex>
@@ -313,7 +293,11 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={ServiceHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text
+                  fontSize="26px"
+                  fontWeight="600"
+                  style={style.style2.tcolor}
+                >
                   Service Hub
                 </Text>
               </Flex>
@@ -369,6 +353,13 @@ const HomePageBody = () => {
               </NavLink>
             </Box>
           </Box>
+        </Flex>
+        <Flex
+          pb="4rem"
+          className="cards"
+          direction={["column", "column", "row"]}
+          w={["90%", "90%", "45%"]}
+        >
           <Box
             borderRadius="3px"
             boxShadow="sm"
@@ -380,7 +371,11 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={CmsHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text
+                  fontSize="26px"
+                  fontWeight="600"
+                  style={style.style2.tcolor}
+                >
                   CMS Hub
                 </Text>
               </Flex>
@@ -447,7 +442,11 @@ const HomePageBody = () => {
                 <Box w="12%">
                   <Image src={OperationsHub} w="100%" />
                 </Box>
-                <Text fontSize="26px" fontWeight="600" style={style2.tcolor}>
+                <Text
+                  fontSize="26px"
+                  fontWeight="600"
+                  style={style.style2.tcolor}
+                >
                   Operations Hub
                 </Text>
               </Flex>
@@ -503,15 +502,15 @@ const HomePageBody = () => {
               </NavLink>
             </Box>
           </Box>
-        </Box>
+        </Flex>
         <Box bgGradient="linear(to-r, #12BEBA, #4DB171)">
-          <Box w="48%" m="auto" pt="5rem" color="white">
-            <Heading size="xl">
+          <Box w={["90%", "90%", "48%"]} m="auto" pt="5rem" color="white">
+            <Heading fontSize={["2xl", "2xl", "3xl"]}>
               Learn and grow with award-winning support and a thriving community
               behind you.
             </Heading>
           </Box>
-          <Box w="45%" m="auto" color="white" pt="2.5rem">
+          <Box w={["85%", "85%", "45%"]} m="auto" color="white" pt="2.5rem">
             <Text>
               You don't have to go it alone. Master the inbound methodology and
               get the most out of your tools with HubSpot's legendary customer
@@ -524,14 +523,14 @@ const HomePageBody = () => {
             textAlign="center"
             color="white"
             m="auto"
-            mt="5rem"
+            mt={["1rem","2rem","3rem","5rem"]}
             pb="5.5rem"
           >
-            <Flex>
+            <Flex direction={["column", "column", "row"]}>
               <Box
-                w="25%"
-                borderBottom="1.5px solid white"
-                borderRight="1.5px solid white"
+                w={["100%", "100%", "25%"]}
+                borderBottom={["none", "none", "1.5px solid white"]}
+                borderRight={["none", "none", "1.5px solid white"]}
                 pb="20px"
                 pt="20px"
               >
@@ -547,9 +546,9 @@ const HomePageBody = () => {
                 <Text mb="25px">HubSpot user groups</Text>
               </Box>
               <Box
-                w="25%"
-                borderBottom="1.5px solid white"
-                borderRight="1.5px solid white"
+                w={["100%", "100%", "25%"]}
+                borderBottom={["none", "none", "1.5px solid white"]}
+                borderRight={["none", "none", "1.5px solid white"]}
                 pt="20px"
               >
                 <Box mb="10px" pt="30px">
@@ -564,9 +563,9 @@ const HomePageBody = () => {
                 <Text mb="25px">monthly visits</Text>
               </Box>
               <Box
-                w="25%"
-                borderBottom="1.5px solid white"
-                borderRight="1.5px solid white"
+                w={["100%", "100%", "25%"]}
+                borderBottom={["none", "none", "1.5px solid white"]}
+                borderRight={["none", "none", "1.5px solid white"]}
                 pt="20px"
               >
                 <Box mb="10px" pt="25px">
@@ -580,18 +579,27 @@ const HomePageBody = () => {
                 </Box>
                 <Text mb="25px">certified professionals</Text>
               </Box>
-              <Box w="25%" borderBottom="1.5px solid white" pt="20px">
+              <Box
+                w={["100%", "100%", "25%"]}
+                borderBottom={["none", "none", "1.5px solid white"]}
+                pt="20px"
+              >
                 <Box mb="10px" pt="25px">
                   <Image src={inbound} m="auto" />
                 </Box>
                 <Box mb="10px">
                   <Heading size="xl">70K</Heading>
                 </Box>
-                <Text mb="25px">registered attendees</Text>
+                <Text mb={["10px","20px","25px"]}>registered attendees</Text>
               </Box>
             </Flex>
-            <Flex>
-              <Box w="25%" borderRight="1.5px solid white" pt="20px" pb="20px">
+            <Flex direction={["column", "column", "row"]}>
+              <Box
+                w={["100%", "100%", "25%"]}
+                borderRight={["none","none","1.5px solid white"]}
+                pt={["10px","15px","20px"]}
+                pb="20px"
+              >
                 <Box mb="10px" pt="30px">
                   <Image src={userGroup} m="auto" />
                 </Box>
@@ -603,7 +611,11 @@ const HomePageBody = () => {
                 </Box>
                 <Text mb="25px">integrations</Text>
               </Box>
-              <Box w="25%" borderRight="1.5px solid white" pt="20px">
+              <Box
+                w={["100%", "100%", "25%"]}
+                borderRight={["none","none","1.5px solid white"]}
+                pt="20px"
+              >
                 <Box mb="10px" pt="30px">
                   <Image src={hubSpotBlog} m="auto" />
                 </Box>
@@ -615,7 +627,11 @@ const HomePageBody = () => {
                 </Box>
                 <Text mb="25px">monthly visits</Text>
               </Box>
-              <Box w="25%" borderRight="1.5px solid white" pt="20px">
+              <Box
+                w={["100%", "100%", "25%"]}
+                borderRight={["none","none","1.5px solid white"]}
+                pt="20px"
+              >
                 <Box mb="10px" pt="30px">
                   <Image src={Social} m="auto" />
                 </Box>
@@ -627,7 +643,7 @@ const HomePageBody = () => {
                 </Box>
                 <Text mb="25px">social followers</Text>
               </Box>
-              <Box w="25%" pt="20px">
+              <Box w={["100%", "100%", "25%"]} pt="20px">
                 <Box mb="15px" pt="30px">
                   <Image src={Customers} m="auto" />
                 </Box>

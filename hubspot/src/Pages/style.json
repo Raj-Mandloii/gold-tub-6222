@@ -1,0 +1,59 @@
+{
+    "btn": {
+      "color": "rgb(62,89,116)",
+      "padding": "2rem",
+      "backgroundColor": "white",
+      "fontWeight": 700,
+      "fontSize": "20px",
+      "marginBottom": "30px"
+    },
+    "sec": {
+        "width": "85%",
+        "marginLeft": "7%",
+        "alignItems": "center",
+        "paddingTop": "7%"
+      },
+      "flex": {
+        "justifyContent": "space-between",
+        "alignItems": "center"
+      },
+      "third": {
+        "color": "white",
+        "textAlign": "left"
+      },
+      "four": {
+        "fontWeight": 600,
+        "marginTop": "40px",
+        "marginBottom": "30px"
+      },
+      "five": {
+        "fontWeight": 600
+      },
+      "style2":{
+        "tcolor": {
+            "color": "#2E475D"
+          },
+          "text": {
+            "color": "#2E475D",
+            "textAlign": "left",
+            "margin": "auto"
+          },
+          "btnbox": {
+            "margin": "auto",
+            "textAlign": "center",
+            "justifyContent": "space-between",
+            "marginTop": "1.5rem",
+            "marginBottom": "2.5rem",
+            "btn1": {
+              "backgroundColor": "#FF5C35",
+              "color": "white",
+              "borderRadius": "2px"
+            },
+            "btn2": {
+              "borderColor": "#FF5C35",
+              "color": "#FF5C35",
+              "borderRadius": "2px"
+            }
+          }
+      }
+}

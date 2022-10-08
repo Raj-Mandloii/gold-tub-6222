@@ -1,5 +1,8 @@
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
   gap: 50px;
+}
+.card{
+  border:"1px solid red"
 }
