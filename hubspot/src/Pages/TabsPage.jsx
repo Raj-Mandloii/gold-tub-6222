@@ -23,11 +23,11 @@ export default function TabPage(){
                 <Flex w="15%"   m="auto" justifyContent={"space-evenly"} >
 
                 <Box >
-                <Tab className='tab' type='cyan'>CRM Suite</Tab>
+                <Tab className='tab'  width="150px" type='cyan'>CRM Suite</Tab>
                 </Box>
 
                 <Box  >
-                <Tab className='tab' type='cyan'>Create a Bundle</Tab>
+                <Tab className='tab'  width="150px" type='cyan'>Create a Bundle</Tab>
                 </Box>
 
                 </Flex>
@@ -49,12 +49,12 @@ export default function TabPage(){
                           <Flex height={"50px"} borderBottom={"1px solid cyan"} justifyContent="center" alignItems={"center"}><Text>COP</Text>$</Flex>  
                           <Flex height={"50px"} justifyContent="center" alignItems={"center"}><Text>CAD</Text>$</Flex>  
                     </Flex>
-                    <Box bgColor={"rgb(245, 248, 250);"} height="50vh">
+                    <Box bgColor={"rgb(245, 248, 250);"} height={{base:"28vh",md:"30vh",lg:"50vh"}}>
                        
                     <CrmSuiteHeader />
                     <BelowHeader/>
                     </Box>
-                    <Flex>
+                    <Flex direction={{base:"column",md:"column",lg:"row"}} ml={{base:"5%",md:"6%",lg:"7%"}}>
                     <Card headOne={"Starter"} pOne="$45/mo" p2={"$600"} p3="$540" desc1={"Essential marketing, sales, customer service, CMS, and operations software."} tOne="Marketing Hub Starter" tTwo={"Starts at 1,000 marketing contacts"} tThree={"Sales Hub Starter"} tFour="Starts at 2 paid users" tFive={"Service Hub Starter"} tSix="Starts at 2 paid users" disp1={"block"} disp2="block" ml={"5%"} ml2="8%" ml4={"-7%"} 
                     gap2="5%" gap3={"5%"}/>
 
@@ -62,10 +62,10 @@ export default function TabPage(){
                     desc1={"Advanced marketing, sales, customer service, CMS, and operations software."}
                     tOne="Marketing Hub Professional" tTwo={"Starts at 2,000 marketing contacts"}
                     tThree="Sales Hub Professional" tFour="Starts at 5 paid users" tFive={"Service Hub Professional"} tSix="Starts at 5 paid users" disp2={"block"} gap1="4%" gap2={"4%"}
-                    gap3="4%" ml3={"-13%"} ml4={"-15%"}/>
+                    gap3="4%" ml={{base:"5%",md:"0.5%",lg:"0"}} ml3={"-13%"} ml4={"-15%"}/>
 
                     <Card headOne={"Enterprise"} pOne="$5,000/mo"  p3="$60,000" desc1={"Our marketing, sales, customer service, CMS, and operations software."} tOne="Marketing Hub Enterprise" tTwo={"Starts at 10,000 marketing contacts"} tThree="Sales Hub Enterprise" tFour={"Starts at 10 paid users"} tFive="Service Hub Enterprise" tSix={"Starts at 10 paid users"} disp2="block" gap1={"3%"} ml2="4%" gap2={"5%"} ml3="-6%"
-                     gap3={"5%"} ml4="-11%"/>
+                     gap3={"5%"} ml={{base:"5%",md:"0.5%",lg:"0"}} ml4="-11%"/>
                     </Flex>
                     <BelowThreeCards/>
                     <CalculateYourPrice/>

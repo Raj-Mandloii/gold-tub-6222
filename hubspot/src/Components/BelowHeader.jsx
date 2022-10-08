@@ -23,15 +23,17 @@ export default function BelowHeader(){
                  text={"Operations Hub"}/>  
             </Flex>
             <Box>
-            <Flex m="auto" width={"75%"} justify="space-around">
-                <Text fontWeight={"light"}>Get access to every Starter, Professional, or Enterprise product, bundled together at a discounted rate.</Text>
-                <Text className="cyanText" color={"cyan.700"} fontWeight="semibold">See bundled pricing details</Text> 
-                <Icon as={FiExternalLink} m="0.5% 0 0 0"/>
+            <Flex m="auto" width={"75%"} direction={{base:"column",md:"row",lg:"row"}} justify="space-around">
+                <Text fontSize={{base:"x-small",md:"small",lg:"md"}} fontWeight={"light"}>Get access to every Starter, Professional, or Enterprise product, bundled together at a discounted rate.</Text>
+                <Text className="cyanText" fontSize={{base:"x-small",md:"small",lg:"md"}} color={"cyan.700"} fontWeight="semibold">See bundled pricing details</Text> 
+                <Icon as={FiExternalLink} fontSize={{base:"x-small",md:"small",lg:"md"}} m="0.5% 0 0 0"/>
             </Flex>
             <Flex  m="auto" mt={"1%"} width={"75%"} justify="center" gap={"5%"}>
-                <Text fontWeight={"light"}>Each plan comes with unlimited free users</Text><Icon as={GrCircleInformation}  m="0.7% 0 0 -3%"/> 
-                <a href="#cyp"><Text className="cyanText" color={"cyan.700"} fontWeight="semibold">Calculate your price</Text></a>
-                <ArrowDownIcon color={"cyan.700"} m="0.8% 0 0 -4.5%" fontWeight={"extrabold"}/>
+                <Text fontSize={{base:"x-small",md:"small",lg:"md"}} fontWeight={"light"}>Each plan comes with unlimited free users</Text><Icon as={GrCircleInformation}  m="0.7% 0 0 -3%"/> 
+
+                <a href="#cyp"><Text className="cyanText" fontSize={{base:"x-small",md:"small",lg:"md"}} color={"cyan.700"} 
+                fontWeight="semibold">Calculate your price</Text></a>
+                <ArrowDownIcon color={"cyan.700"} m="0.8% 0 0 -4.5%" fontSize={{base:"x-small",md:"small",lg:"md"}} fontWeight={"extrabold"}/>
             </Flex>
             </Box>
         </Box>
