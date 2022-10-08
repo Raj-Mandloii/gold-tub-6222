@@ -648,8 +648,8 @@ const HomePageBody = () => {
                   <Image src={Customers} m="auto" />
                 </Box>
                 <Box mb="15px">
-                  <Flex ml="25%">
-                    <Heading size="xl">143,000</Heading>
+                  <Flex ml={["30%","30%","25%"]}>
+                    <Heading size="xl">150,000</Heading>
                     <GoPlusSmall />
                   </Flex>
                 </Box>
