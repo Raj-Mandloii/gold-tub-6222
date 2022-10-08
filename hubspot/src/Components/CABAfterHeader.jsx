@@ -5,58 +5,58 @@ import CRARightSideComp from "./CRARightSideComp";
 export default function CABAfterHeader(){
 
     return(
-        <Flex color="#33475b" mt="5%" width={"95%"}  justifyContent={"space-between"} >
-            <Box width={"57%"}>
-                <Flex  width="100%" ml={"10%"} alignItems="center">
+        <Flex  direction={{base:"column",md:"row",lg:"row"}} color="#33475b"  mt="5%" width={{base:"100%",md:"96%",lg:"95%"}}  justifyContent={"space-between"} >
+            <Box  width={{base:"95%%",md:"57%",lg:"57%"}} mr={{base:"5%",md:"0%",lg:"0"}}>
+                <Flex  width="100%" ml={{base:"0%",md:"10%",lg:"10%"}} mr={{base:"5%",md:"0",lg:"0"}} alignItems="center">
                     <Box  width="100%">
-                        <Text fontSize={"4xl"} fontWeight="bold" textAlign={"left"}>Marketing Hub</Text>
-                        <Text fontSize={"small"} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Everything you need to capture leads and turn them into customers.</Text>
+                        <Text fontSize={{base:"xl",md:"2xl",lg:"4xl"}} fontWeight="bold" textAlign={"left"}>Marketing Hub</Text>
+                        <Text fontSize={{base:"x-small",md:"small",lg:"small"}} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Everything you need to capture leads and turn them into customers.</Text>
                     </Box>
-                    <Text fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
+                    <Text fontSize={{base:"x-small",md:"small",lg:"md"}} fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
                 </Flex>
-                <Flex ml={"10%"} border="1px solid teal" width={"100%"}>
+                <Flex ml={["0","10%","10%"]} border="1px solid teal" width={"100%"}>
                    <Box width={"38%"} height="90px" border={"2px solid cyan"} bgColor="cyan.100"
                         >
-                            <Flex justifyContent={"center"}  gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Starter.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Starter</Text>
+                            <Flex justifyContent={"center"} mt={["15%","8%","6%"]}  gap="2%">
+                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Starter.svg" />
+                                <Text fontSize={["x-small","small","md"]} >Starter</Text>
                             </Flex>
-                            <Text>$50/month</Text>
+                            <Text fontSize={["x-small","small","md"]} >$50/month</Text>
                     </Box>
                     <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"} >
-                            <Flex justifyContent={"center"}  gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Pro.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Professional</Text>
+                            <Flex justifyContent={"center"} mt={["15%","8%","6%"]}  gap="2%">
+                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Pro.svg" />
+                                <Text fontSize={["x-small","small","md"]} >Professional</Text>
                             </Flex>
-                            <Text>$890/month</Text>
+                            <Text fontSize={["x-small","small","md"]} >$890/month</Text>
                     </Box>
                     <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"}>
-                            <Flex justifyContent={"center"} gap="2%">
+                            <Flex justifyContent={"center"} mt={["15%","8%","6%"]} gap="2%">
                                 <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Ent.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Enterprise</Text>
+                                <Text  fontSize={["x-small","small","md"]} >Enterprise</Text>
                             </Flex>
-                            <Text>$3,200/month</Text>
+                            <Text fontSize={["x-small","small","md"]} >$3,200/month</Text>
                     </Box>
                 </Flex>
-                    <Box m="5% 0 5% 10%" width={"100%"}>
+                    <Box m={["5% 0 5% 0","5% 0 5% 10%","5% 0 5% 10%"]} width={"100%"}>
                         <Divider width={"100%"} borderColor={"1px solid grey"} />
                     </Box>
 
                     {/* Marketing Hub */}
 
-                <Flex  ml="10%" width={"100%"} justifyContent="space-between" alignItems={"center"}>
+                <Flex  ml={["0","10%","10%"]} width={"100%"} justifyContent="space-between" alignItems={"center"}>
                     <Box>
-                        <Text fontSize={"large"} fontWeight="semibold" textAlign={"left"} mb="5%">Marketing Contacts</Text>
-                        <Text fontWeight={"light"}>Includes 1,000 marketing contacts. Additional marketing contacts are sold in</Text>
-                        <Flex>
-                        <Text fontWeight={"light"}>increments of 1,000 from $50.00/month.</Text>
-                        <Text fontWeight={"semibold"} color="cyan.700">More details.</Text>
+                        <Text fontSize={["small","md","large"]} fontWeight="semibold" textAlign={"left"} mb="5%">Marketing Contacts</Text>
+                        <Text fontSize={["small","md","md"]} textAlign={["left","none","none"]} fontWeight={"light"}>Includes 1,000 marketing contacts. Additional marketing contacts are sold in</Text>
+                        <Flex width={["100%","auto","auto"]} gap={"6%"} >
+                        <Text fontSize={["small","md","md"]} textAlign={["left","none","none"]} fontWeight={"light"}>increments of 1,000 from $50.00/month.</Text>
+                        <Text width={"55%"} fontSize={["small","md","md"]} textAlign={["right","none","none"]} fontWeight={"semibold"} color="cyan.700">More details.</Text>
                         </Flex>
                     </Box>
                     <Button variant={"outline"} size="lg" border="1px solid grey">1,000</Button>
                 </Flex>
                 <Slider aria-label='slider-ex-2' colorScheme='gray' defaultValue={30} width="100%"
-                    ml={"10%"} mt="3%">
+                    ml={["0","10%","10%"]} mt="3%">
                         <SliderTrack>
                             <SliderFilledTrack />
                         </SliderTrack>
