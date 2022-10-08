@@ -15,15 +15,15 @@ export default function CustomerSupport(){
                     <Text fontSize={{base:"small",md:"md",lg:"md"}} fontWeight={"light"} mt="5%">You don’t have to do it alone. HubSpot’s award-winning customer support and services teams are here to answer your questions, help you master the inbound methodology, and make sure you’re getting the most out of your tools. All that — plus our detailed help documentation, educational resources, and training programs — means you’ll never feel left out in the cold.</Text>
                 </Box>
                 <Flex justifyContent={"space-around"} mt={{base:"5%",md:"0",lg:"0"}}  >
-                    <Box  mt="3%" fontSize={{base:"x-small",md:"md",lg:"md"}} height={{base:"40px",md:"60px",lg:"70px"}}>
+                    <Box  mt="3%" fontSize={{base:"x-small",md:"small",lg:"md"}} height={{base:"40px",md:"60px",lg:"70px"}}>
                         <Text fontWeight={"semibold"}>Phone & Email Support</Text>
                         <PhoneIcon color={"gray.400"} fontSize="xl" mt={"10%"}/>
                     </Box>
-                    <Box  mt="3%" fontSize={{base:"x-small",md:"md",lg:"md"}} height={{base:"40px",md:"60px",lg:"70px"}}>
+                    <Box  mt="3%" fontSize={{base:"x-small",md:"small",lg:"md"}} height={{base:"40px",md:"60px",lg:"70px"}}>
                         <Text fontWeight={"semibold"}>Help Documentation & Training</Text>
                         <Icon as={TiDocumentText} color="grey" fontSize={"3xl"} mt="4%"/>
                     </Box>
-                    <Box  mt="3%" fontSize={{base:"x-small",md:"md",lg:"md"}} height={{base:"40px",md:"60px",lg:"70px"}}>
+                    <Box  mt="3%" fontSize={{base:"x-small",md:"small",lg:"md"}} height={{base:"40px",md:"60px",lg:"70px"}}>
                         <Text fontWeight={"semibold"}>Community Support</Text>
                         <Icon as={IoMdPeople} fontSize="3xl" color={"grey"} mt="5%"/>
                     </Box>

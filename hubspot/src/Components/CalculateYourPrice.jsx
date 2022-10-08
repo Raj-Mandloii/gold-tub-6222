@@ -129,18 +129,18 @@ export default function CalculateYourPrice(){
                     </Box>
                 </Box>
                 <Box bgColor={"white"} border="1px solid grey" borderTop="2px solid cyan" width={{base:"100%",md:"35%",lg:"35%"}} mt={{base:"3%",md:"0%",lg:"0%"}}
-                 height={{base:"90vh",md:"130vh",lg:"135vh"}} 
+                 height={{base:"90vh",md:"100vh",lg:"135vh"}} 
                 >
                     <Box>
-                    <Flex width={{base:"85%",md:"80%",lg:"75%"}} height={"50px"} bgColor={"gray.300"} m="auto" mt={"4%"}
+                    <Flex width={{base:"85%",md:"85%",lg:"75%"}} height={"50px"} bgColor={"gray.300"} m="auto" mt={"4%"}
                     borderRadius={"25px"}>
-                        <Box  ml="5%" width={"45%"} >
-                        <Text fontSize={{base:"x-small",md:"smaller",lg:"small"}} fontWeight={"semibold"} color="rgb(51, 71, 91)" mt={{base:"15%",md:"8%",lg:"5%"}}>Pay Monthly</Text>
-                        <Text color="rgb(51, 71, 91)" fontSize={{base:"x-small",md:"smaller",lg:"small"}} fontWeight="light">Commit Annually</Text>
+                        <Box  ml="5%" width={"48%"} >
+                        <Text fontSize={{base:"x-small",md:"x-small",lg:"small"}} fontWeight={"semibold"} color="rgb(51, 71, 91)" mt={{base:"15%",md:"8%",lg:"5%"}}>Pay Monthly</Text>
+                        <Text color="rgb(51, 71, 91)" fontSize={{base:"x-small",md:"x-small",lg:"small"}} fontWeight="light">Commit Annually</Text>
                         </Box>
                         <Box width="65%" ml={"15%"} backgroundColor="white" border={"1px solid teal"}  borderRadius={"25px"}>
-                        <Text fontSize={{base:"x-small",md:"smaller",lg:"small"}} fontWeight={"semibold"} color="rgb(51, 71, 91)" mt={{base:"12%",md:"8%",lg:"4%"}} >Pay Upfront</Text>
-                        <Text color="rgb(51, 71, 91)" fontSize={{base:"x-small",md:"smaller",lg:"small"}} fontWeight="light">Commit Annually</Text>
+                        <Text fontSize={{base:"x-small",md:"x-small",lg:"small"}} fontWeight={"semibold"} color="rgb(51, 71, 91)" mt={{base:"12%",md:"8%",lg:"4%"}} >Pay Upfront</Text>
+                        <Text color="rgb(51, 71, 91)" fontSize={{base:"x-small",md:"x-small",lg:"small"}} fontWeight="light">Commit Annually</Text>
                         </Box>
                     </Flex>
                     </Box>
