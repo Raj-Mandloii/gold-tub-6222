@@ -103,19 +103,19 @@ export default function FreeTools() {
           objectFit={"fill"} bgPosition="center" bgRepeat="no-repeat" w={"80%"} h={"auto"} bgImage={svgfordiv}>
           <Text mb={"3em"} color={"#33475B"} mt={"2.3em"} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >The HubSpot Guarantee</Text>
 
-          <Flex justifyContent={"space-evenly"} position={["column", "column", "row", "row"]}>
+          <Flex justifyContent={"space-evenly"} alignItems="center" direction={["column", "column", "row", "row"]}>
             <Box></Box>
-            <Box w={"20%"} textAlign={"center"}>
+            <Box w={["100%","100%","20%","20%"]} textAlign={"center"}>
               <Image w={"4em"} style={{ display: "block", margin: "0 auto" }} src={communiy} />
               <Text fontWeight={"bold"}>Full Team Visibility</Text>
               <Text p={2}>Invite your entire team to collaborate in one place.</Text>
             </Box>
-            <Box w={"20%"} textAlign={"center"}>
+            <Box  w={["100%","100%","20%","20%"]} textAlign={"center"}>
               <Image w={"4em"} style={{ display: "block", margin: "0 auto" }} src={collar} />
               <Text fontWeight={"bold"}>Free Access</Text>
               <Text p={2}>This isn't a trial. Your free access never expires.</Text>
             </Box>
-            <Box w={"20%"} textAlign={"center"}>
+            <Box  w={["100%","100%","20%","20%"]} textAlign={"center"}>
               <Image w={"4em"} style={{ display: "block", margin: "0 auto" }} src={graph} />
               <Text fontWeight={"bold"}>All Your Data</Text>
               <Text p={2}>Store as many as one million contacts and companies.</Text>
