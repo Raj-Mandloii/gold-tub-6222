@@ -296,13 +296,15 @@ const ContactPage = () => {
           fontWeight={"600"}
         >
           <a
-            target={"_blank"}
+            target="_blank"
+            rel="noreferrer"
             href="https://legal.hubspot.com/legal-stuff?hubs_signup-url=www.hubspot.com%252F&hubs_signup-cta=homepage-nav-contact-sales"
           >
             Legal Stuff
           </a>
           <a
             target={"_blank"}
+            rel="noreferrer"
             href="https://legal.hubspot.com/privacy-policy?hubs_signup-url=www.hubspot.com%252F&hubs_signup-cta=homepage-nav-contact-sales"
           >
             Privacy Policy

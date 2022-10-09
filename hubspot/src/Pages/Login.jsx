@@ -34,29 +34,27 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
-      if (email === "eve.holt@reqres.in" && password === "cityslicka") {
-        dispatch(LoginAction({ email, password })).then((r) => {
-          if (r.type === LOGIN_SUCCESS) {
-            toast({
-              position: "bottom-right",
-              title: "Login Success",
-              status: "success",
-              duration: 2000,
-              isClosable: true,
-            });
-            navigate("/");
-          }
-        });
-      } else {
-        toast({
-          position: "bottom-right",
-          title: "Invalid Credentials.",
-          description: "Please Check E-Mail & Password",
-          status: "error",
-          duration: 3000,
-          isClosable: true,
-        });
-      }
+      dispatch(LoginAction({ email, password })).then((r) => {
+        if (r.type === LOGIN_SUCCESS) {
+          toast({
+            position: "bottom-right",
+            title: "Login Success",
+            status: "success",
+            duration: 3000,
+            isClosable: true,
+          });
+          navigate("/");
+        }
+      });
+    } else {
+      toast({
+        position: "bottom-right",
+        title: "Invalid Credentials.",
+        description: "Please Check E-Mail & Password",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
     }
   };
   const gotoHome = () => {

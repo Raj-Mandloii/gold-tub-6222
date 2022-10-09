@@ -1,6 +1,6 @@
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 import "./FrequentlyAskedQue.css"
-import {Accordion,AccordionItem,AccordionButton,AccordionPanel,AccordionIcon,} from '@chakra-ui/react'
+
 import FaqComp from "./FaqComp"
 import {FiExternalLink} from "react-icons/fi"
 import { PhoneIcon } from "@chakra-ui/icons"
