@@ -1,0 +1,20 @@
+{
+  "hover1": {
+    "color": "teal",
+    "borderBottom": "2px solid teal"
+  },
+  "btnstyle": {
+    "backgroundColor": "rgb(255,92,53)",
+    "color": "white",
+    "borderRadius": "3px",
+    "width": "100%"
+  },
+
+  "btnstyle1": {
+    "color": "rgb(255,92,53)",
+    "border": "1px solid rgb(255,92,53)",
+    "backgroundColor": "white",
+    "borderRadius": "3px",
+    "width": "100%"
+  }
+}
