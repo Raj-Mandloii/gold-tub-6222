@@ -11,7 +11,10 @@ import {
   
   Link,
 } from "@chakra-ui/react";
-import { ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
+import {
+  ChevronDownIcon,
+  Search2Icon,
+} from "@chakra-ui/icons";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
@@ -23,11 +26,18 @@ import WhyHubspot from "../Assets/WhyHubspot.svg";
 import UserResource from "../Assets/UserResource.svg";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
+import MobileNav from "./MobileNav";
 const Navbar = ({ s, bs }) => {
   const [mouse, setMouse] = useState(false);
   const [resources, setResources] = useState(false);
-  const isAuth = useSelector(store => store.isAuth);
-  console.log(isAuth);
+  const isAuth = useSelector((store) => store.isAuth);
+
+  let [status, setStatus] = useState(false);
+
+  const handleStatus = () => {
+    status = !status;
+    setStatus(status);
+  };
   const btnstyle = {
     backgroundColor: "rgb(255,92,53)",
     color: "white",
@@ -45,13 +55,13 @@ const Navbar = ({ s, bs }) => {
   };
 
   return (
-    <Box style={s} boxShadow={bs}>
+    <Box style={s} boxShadow={bs} size={["xs", "sm", "md", "lg"]}>
       <Box className="nav">
-        <Box className="navtop">
+        <Box className="navtop" display={{ base: "none", md: "block" }}>
           <Flex justifyContent="space-between">
             <Box w="20%">
               <Flex justifyContent="space-between">
-                <Box _hover={hover} >
+                <Box _hover={hover}>
                   <NavLink to="">
                     Languages <ChevronDownIcon />
                   </NavLink>
@@ -78,7 +88,7 @@ const Navbar = ({ s, bs }) => {
                   </NavLink>
                 </Box>
                 <Box _hover={hover}>
-                  <NavLink to="/login">{isAuth ? 'Log Out':'Log in'}</NavLink>
+                  <NavLink to="/login">{isAuth ? "Log Out" : "Log in"}</NavLink>
                 </Box>
                 <Box _hover={hover}>
                   <NavLink to="">Customer Support</NavLink>
@@ -102,7 +112,7 @@ const Navbar = ({ s, bs }) => {
                 textAlign="center"
                 alignItems="center"
               >
-                <Box w="20%">
+                <Box w={["30%", "30%", "20%"]}>
                   <NavLink to="/">
                     <Image src={NavLogo} alt="Hubspot logo" width="100%" />
                   </NavLink>
@@ -110,6 +120,7 @@ const Navbar = ({ s, bs }) => {
                 <Box
                   onMouseEnter={() => setMouse(true)}
                   onMouseLeave={() => setMouse(false)}
+                  display={{ base: "none", md: "block" }}
                 >
                   <Popover trigger="hover" placement="bottom">
                     <PopoverTrigger>
@@ -134,7 +145,7 @@ const Navbar = ({ s, bs }) => {
                     </PopoverContent>
                   </Popover>
                 </Box>
-                <Box>
+                <Box display={{ base: "none", md: "block" }}>
                   <Box _hover={hover1} className="bnavLeft">
                     <NavLink to="/Pricing">Pricing</NavLink>
                   </Box>
@@ -142,6 +153,7 @@ const Navbar = ({ s, bs }) => {
                 <Box
                   onMouseEnter={() => setResources(true)}
                   onMouseLeave={() => setResources(false)}
+                  display={{ base: "none", md: "block" }}
                 >
                   <Popover trigger="hover" placement="bottom">
                     <PopoverTrigger>
@@ -267,9 +279,12 @@ const Navbar = ({ s, bs }) => {
                     </PopoverContent>
                   </Popover>
                 </Box>
+                <Box display={{ base: "block", md: "none" }}>
+                        <MobileNav/>
+                </Box>
               </Flex>
             </Box>
-            <Box>
+            <Box display={{ base: "none", md: "block" }}>
               <Button style={btnstyle}>Start free or get a demo</Button>
             </Box>
           </Flex>

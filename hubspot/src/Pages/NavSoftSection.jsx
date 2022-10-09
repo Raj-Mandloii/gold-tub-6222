@@ -1,6 +1,6 @@
 import "./NavSoftSection.css";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import Marketing from "../Assets/MarketingHub.svg";
 import SalesHub from "../Assets/SalesHub.svg";
@@ -19,61 +19,64 @@ const NavSoftSection = () => {
         All of HubSpot's marketing, sales CRM, customer service, CMS, and
         operations software on one platform.
       </Text>
-      <Box className="btnlinkbox">
-        <Flex justifyContent="space-between">
-          <Box className="boxstyle">
+      <Box className="btnlinkbox" w={["90%", "90%", "60%"]}>
+        <Flex
+          justifyContent="space-between"
+          direction={["column", "column", "row"]}
+        >
+          <Box className="boxstyle" w={["100%", "100%", "45%"]}>
             <NavLink to="/FreeHubSpotCRM">
               Free HubSpot CRM <ArrowForwardIcon />
             </NavLink>
           </Box>
-          <Box className="boxstyle">
+          <Box className="boxstyle" w={["100%", "100%", "45%"]}>
             <NavLink to="/productoverview">
               Overview of all products <ArrowForwardIcon />
             </NavLink>
           </Box>
         </Flex>
       </Box>
-      <Box className="cards">
+      <SimpleGrid className="cards" minChildWidth="250px" w={["90%","90%","80%"]}>
         <NavLink to="/Marketing">
-        <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
-          <Flex textAlign="left" justifyContent="space-around">
-            <Box width="10%">
-              <Image src={Marketing} alt="Marketing Hub" width="100%" />
-            </Box>
-            <Box>
-              <Text className="cardhead">Marketing Hub</Text>
-              <Text>
-                Marketing automation <br />
-                software.{" "}
-                <span style={{ color: "teal", fontWeight: "500" }}>
-                  <Link>
-                    Free and premium <br /> plans <ArrowForwardIcon />
-                  </Link>
-                </span>
-              </Text>
-            </Box>
-          </Flex>
-        </Box>
+          <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
+            <Flex textAlign="left" justifyContent="space-around">
+              <Box width="10%">
+                <Image src={Marketing} alt="Marketing Hub" width="100%" />
+              </Box>
+              <Box>
+                <Text className="cardhead">Marketing Hub</Text>
+                <Text>
+                  Marketing automation <br />
+                  software.{" "}
+                  <span style={{ color: "teal", fontWeight: "500" }}>
+                    <Link>
+                      Free and premium <br /> plans <ArrowForwardIcon />
+                    </Link>
+                  </span>
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
         </NavLink>
         <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
-        <NavLink to="/Sales">
-          <Flex textAlign="left" justifyContent="space-around">
-            <Box width="10%">
-              <Image src={SalesHub} alt="Sales Hub" width="100%" />
-            </Box>
-            <Box>
-              <Text className="cardhead">Sales Hub</Text>
-              <Text>
-                Sales CRM software.{" "}
-                <span style={{ color: "teal", fontWeight: "500" }}>
-                  <Link>
-                    Free <br /> and premium plans <ArrowForwardIcon />
-                  </Link>
-                </span>
-              </Text>
-            </Box>
-          </Flex>
-        </NavLink>
+          <NavLink to="/Sales">
+            <Flex textAlign="left" justifyContent="space-around">
+              <Box width="10%">
+                <Image src={SalesHub} alt="Sales Hub" width="100%" />
+              </Box>
+              <Box>
+                <Text className="cardhead">Sales Hub</Text>
+                <Text>
+                  Sales CRM software.{" "}
+                  <span style={{ color: "teal", fontWeight: "500" }}>
+                    <Link>
+                      Free <br /> and premium plans <ArrowForwardIcon />
+                    </Link>
+                  </span>
+                </Text>
+              </Box>
+            </Flex>
+          </NavLink>
         </Box>
         <Box className="card" boxShadow="sm" _hover={{ boxShadow: "md" }}>
           <Flex textAlign="left" justifyContent="space-around">
@@ -130,7 +133,7 @@ const NavSoftSection = () => {
             </Box>
           </Flex>
         </Box>
-      </Box>
+      </SimpleGrid>
       <Box className="bbox">
         <Box className="cardbottomhead">
           <Text color={c}>App Marketplace</Text>
