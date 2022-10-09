@@ -5,6 +5,7 @@ import {
   AccordionIcon,
   AccordionPanel,
 } from '@chakra-ui/react'
+import { Wrap, WrapItem } from '@chakra-ui/react'
 import { PhoneIcon, AddIcon, CheckIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import React from 'react'
 import communiy from "../../Assets/community.png"
@@ -88,7 +89,7 @@ export default function FreeTools() {
       <Button sx={buttonStyle}>Get started free</Button>
       <br />
       {/* ----------------------     FIVE    DIVS    BELOW    BUTTON    -------------------------------        */}
-      <Flex alignItems={"center"} w={"100%"} justifyContent={"center"} direction={["column", "column", "column", "row"]}>
+      <Flex alignItems={"center"} w={"100%"} justifyContent={"center"} wrap="wrap" >
         <Divs heading={headings[0]} array={data[0]} />
         <Divs heading={headings[1]} array={data[1]} />
         <Divs heading={headings[2]} array={data[2]} />
@@ -158,10 +159,10 @@ export default function FreeTools() {
           w={"100%"}
           backgroundPosition={"center"} bgRepeat={"no-repeat"}
           bgImage={"//static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/bottom-blob.svg"}>
-          <Text mb={"1em"} color={"#33475B"} mt={["6em", "4em", "1em", "0.3em"]} 
-          fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
+          <Text mb={"1em"} color={"#33475B"} mt={["6em", "4em", "1em", "0.3em"]}
+            fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
           <br />
-          <Faq faqArray={faqArray}/>
+          <Faq faqArray={faqArray} />
 
           <Box display={"flex"} justifyContent={"center"}>
             <Text pr={"3px"} fontSize={"12px"}>
@@ -183,8 +184,8 @@ export default function FreeTools() {
       <Button sx={buttonStyle}>Get started free</Button>
 
       <div>
-          <Footer/>
-        </div>
+        <Footer />
+      </div>
     </Box>
   )
 }
@@ -194,8 +195,9 @@ export default function FreeTools() {
 function Divs({ heading, array }) {
   return (
     // 
-    <Flex direction={"column"} overflow={"hidden"} minH={["22em","22em","26em","26em"]} justifyContent={"space-evenly"}  m={4} w={["93%", "93%", "93%", "13%"]} border={"0.001px solid gray"} pb={"1em"} pt="10" pl={"1em"} pr={"0.3em"} rounded='md' bg='white'>
-      <Text textAlign={"start"} fontWeight={"700"} pb="1em" fontSize={["16px", "16px", "16px", "16px"]}>{heading}</Text>
+    <Flex direction={"column"} overflow={"hidden"} justifyContent={"space-evenly"} h="50vh" m="2rem"
+      w={["93%", "93%", "33%", "13%"]} border={"0.001px solid gray"} rounded='md' bg='white' textAlign={"center"}>
+      <Text textAlign={"center"} fontWeight={"700"} ml="1rem" fontSize="sm">{heading}</Text>
       {/*  */}
       <InsideText content={array[0]} />
       <InsideText content={array[1]} />
@@ -216,12 +218,12 @@ function InsideText({ content }) {
     ml: "1em",
     fontWeight: "400",
     textAlign: "start",
-    fontSize: ["14px", "12px", "12px", "14px"],
-    pb: "2em"
+    fontSize: "sm",
+
   }
   return (
-    <Flex direction={"row"} w={"100%"} >
-      <CheckIcon color={"gray"} mt={"0.2em"} />
+    <Flex direction={"row"} w={["50%","50%","50%","100%",]}  alignSelf={["center","center","center","center"]}>
+      <CheckIcon color={"gray"} mt={"0.2em"} ml="1rem" />
       <Text sx={textStyle}>{content}</Text>
     </Flex>
   )
