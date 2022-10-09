@@ -1,5 +1,5 @@
 import { AddIcon, ArrowDownIcon, CheckIcon, ExternalLinkIcon, Icon, PhoneIcon } from '@chakra-ui/icons';
-import { Box, Flex, Text, Image, Button, Input, Spacer, Slider, SliderTrack, SliderFilledTrack, SliderThumb, TagLabel, Link, } from '@chakra-ui/react'
+import { Box, Flex, Text, Image, Button, Input, Spacer, Slider, SliderTrack, SliderFilledTrack, SliderThumb, TagLabel, Link, SliderMark, } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import "./customStyle.css"
 import CustomCards from './CustomCards';
@@ -10,10 +10,7 @@ import { Marketingtab } from './Marketingtab';
 
 
 export const Marketing = () => {
-  const [value, setValue] = React.useState(10000)
-  const handleChange = (value) => {
-    setValue(value + 10000)
-  }
+  const [sliderValue, setSliderValue] = useState(0)
   const freeTools = [
     "Forms",
     "Email marketing",
@@ -158,24 +155,27 @@ export const Marketing = () => {
 
 
       {/* ================== FREE    COMPONENTS     ======================= */}
+      {/* <Show breakpoint='(min-width: 1200px)'> */}
       <Flex p={"1em"} direction="column" alignSelf={"center"} w={"75%"} border={"3px solid #F5F8FA"}>
         <Flex m={6} justifyContent={"space-between"}>
           <Text fontSize={"18px"} >Free Tools</Text>
           <Button p={4} border="1px solid #FF7A59" mt={"0.1em"} fontWeight={"300"} fontSize={"13px"} borderRadius={"2px"} color={"#FF7A59"} h={"2em"} bgColor={"white"} >Get started free</Button>
         </Flex>
         <hr />
-        <Flex>
+        <Flex direction={["column", "column", "column", "row"]}>
           {
             freeTools.map(item => (
               <Box mt={4} display={"flex"}>
                 <CheckIcon ml={8} color={"gray"} mt={"0.2em"} />
-                <Text textAlign={"start"} mt={"0.1em"} fontSize={"13px"} pl={"0.7em"} pr={"0.7em"}>{item}</Text>
+                <Text textAlign={"start"} mt={"0.1em"} fontSize={"sm"} pl={"0.7em"} pr={"0.7em"}>{item}</Text>
               </Box>
             ))
           }
-          <Text fontWeight={"600"} className='underline' textAlign={"start"} mt={"1.3em"} fontSize={"13px"} pl={"0.7em"} pr={"0.7em"}>See all features</Text>
+          <Text fontWeight={"600"} className='underline' textAlign={"start"} mt={"1.3em"}
+            fontSize={"13px"} pl={["2em", "2em", "2em", "0.7em"]} pr={"0.7em"}>See all features</Text>
         </Flex>
       </Flex>
+      {/* </Show> */}
       <Text mt={10} color={"#33475B"} pl={"0.4em"} fontSize={"30px"} fontWeight={"800"}>Recommended Bundles</Text>
 
       {/*  ===================               S T A R T E R    C R M     S U I T E S */}
@@ -307,12 +307,23 @@ export const Marketing = () => {
                 <BrownSmallText content={"increments of 10,000 from $100.00/month."} />
                 <LinkText content={"More details"} />
                 <Spacer />
-                <Input readOnly maxW='100px' mr='2rem' value={value} onChange={handleChange} mb={4} w={"5em"} />
+                <Input readOnly maxW='100px' mr='2rem'
+                  value={(sliderValue+1)*1000} 
+                  mb={4} w={"5em"} />
               </Flex>
 
               {/* =================================    SCROLL INPUT      ========================== */}
-              <CustomSlider handleChange={handleChange} value={value} />
-              <Flex>
+              {/* <CustomSlider handleChange={handleChange} value={value} />
+               */}
+
+              <Slider aria-label='slider-ex-8' onChange={(val) => setSliderValue(val)}>
+
+                <SliderTrack >
+                  <SliderFilledTrack />
+                </SliderTrack>
+                <SliderThumb fontSize='0' boxSize='18px' />
+              </Slider>
+              <Flex mt="1em">
                 <BrownSmallText content={"10,000"} />
                 <Spacer />
                 <BrownSmallText content={"1,00,000"} />
@@ -338,13 +349,18 @@ export const Marketing = () => {
             <br />
             <br />
           </Flex >
-          <CalculatePriceComp />
+          <CalculatePriceComp sliderValue={sliderValue}/>
 
 
         </Flex>
 
 
       </Flex>
+
+
+
+
+
       <br />
       <br />
       <br />
@@ -391,13 +407,13 @@ export const Marketing = () => {
   )
 }
 
-function CalculatePriceComp() {
+function CalculatePriceComp({sliderValue}) {
   return (
     <Flex direction={"column"} >
       <Flex h={"34em"} bgColor={"white"} borderRadius={"0.7em"} shadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" mt="4em" direction={"column"} >
         <Box borderRadius={"0.7em"} bgColor={"#00AFB2"} h={"0.2em"} w={"100%"}></Box>
         <Flex p={4} direction={"column"}>
-          <Text ml={"2em"} mr={"2em"} color="#33475B" fontSize={"4xl"} fontWeight={"900"}>$3,200<span style={{ fontSize: "22px" }}>/mo</span></Text>
+          <Text ml={"2em"} mr={"2em"} color="#33475B" fontSize={"4xl"} fontWeight={"900"}>{`\$${Number(sliderValue)+1*45}`}<span style={{ fontSize: "22px" }}>/mo</span></Text>
           <Text color="#33475B" fontSize={"xs"} >billed at <span style={{ fontSize: "12px", fontWeight: "bold" }}>$38,400/yr</span></Text>
         </Flex>
         <Text fontSize={"12px"} fontWeight={"600"}>ESTIMATED COST TO GET STARTED:</Text>
