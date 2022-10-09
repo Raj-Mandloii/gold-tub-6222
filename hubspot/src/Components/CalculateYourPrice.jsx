@@ -1,8 +1,8 @@
 import { Button } from "@chakra-ui/button";
 import { Box, Divider, Flex, Text } from "@chakra-ui/layout";
-import {Slider,SliderTrack,SliderFilledTrack,SliderThumb,SliderMark, Icon, } from '@chakra-ui/react'
+import {Slider,SliderTrack,SliderFilledTrack,SliderThumb, Icon, } from '@chakra-ui/react'
 import {ChevronUpIcon,ChevronDownIcon,ArrowUpIcon} from "@chakra-ui/icons"
-import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
+import { Checkbox } from '@chakra-ui/react'
 import {FiShare} from "react-icons/fi"
 
 import "./CalculateYourPrice.css"

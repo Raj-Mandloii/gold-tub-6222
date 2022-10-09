@@ -5,9 +5,9 @@ export default function ReacommendedServices(){
 
     return(
         <Box color="#33475b">
-                <Box  width="60%" ml="6%">
-                    <Text fontSize={"4xl"} fontWeight="bold" textAlign={"left"}>Recommeded Services</Text>
-                    <Text fontSize={"small"} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Upgrade your plan with these premium services for expert help and guidance.</Text>
+                <Box  width="60%" ml={["0","6%","6%"]}>
+                    <Text fontSize={["xl","2xl","4xl"]} fontWeight="bold" textAlign={"left"}>Recommeded Services</Text>
+                    <Text fontSize={["x-small","small","small"]} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Upgrade your plan with these premium services for expert help and guidance.</Text>
                 </Box>
                 <ServiceComp header={"Inbound Consulting: Monthly"} price="450.00"/>
                 <ServiceComp header={"Inbound Consulting: Ongoing"} price="1,100.00"/>
