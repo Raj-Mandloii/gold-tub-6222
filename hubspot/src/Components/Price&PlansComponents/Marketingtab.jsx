@@ -45,8 +45,8 @@ export const Marketingtab = () => {
         <Show breakpoint='(max-width: 1200px)'>
 
 
-            <Box flex justifyItems={"center"}>
-                <Tabs variant='unstyled' size='lg' align="center" mt="2rem">
+            <Box flex justifyItems={"center"} >
+                <Tabs variant='unstyled' size='lg' align="center" mt="2rem" >
                     <TabList >
                         <Tab _selected={style} bg="white" fontSize="0.8rem" p="1.7em 6em" border={"1px solid #00A4BE"}>Starter</Tab>
                         <Tab _selected={style} fontSize="0.8rem" p="1.7em 6em" border={"1px solid #00A4BE"}>Professional</Tab>
