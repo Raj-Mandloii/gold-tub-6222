@@ -1,10 +1,8 @@
 import {
-  Box, Button, Flex, Text, Spacer, Image, chakra, textDecoration, Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
+  Box, Button, Flex, Text, Spacer, Image,
+  
 } from '@chakra-ui/react'
+import { Wrap, WrapItem } from '@chakra-ui/react'
 import { PhoneIcon, AddIcon, CheckIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import React from 'react'
 import communiy from "../../Assets/community.png"
@@ -74,10 +72,11 @@ export default function FreeTools() {
     pr: "2em",
     pt: "2em",
     pb: "2em",
+    mb:"1em",
     borderRadius: "2px"
   }
   return (
-    <Box>
+    <Box >
       <Flex justifyContent={"center"} direction={"column"}>
         <Text fontWeight={"600"} fontSize={["32px", "32px", "32px", "32px"]}>Start growing today with HubSpot’s free tools.</Text>
         <Text color={"gray"} pt={"1.4em"} fontWeight={"400"} marginTop={"0.8em"} marginBottom={"2em"} fontSize={["14px", "14px", "14px", "14px"]} >
@@ -88,7 +87,7 @@ export default function FreeTools() {
       <Button sx={buttonStyle}>Get started free</Button>
       <br />
       {/* ----------------------     FIVE    DIVS    BELOW    BUTTON    -------------------------------        */}
-      <Flex alignItems={"center"} w={"100%"} justifyContent={"center"} direction={["column", "column", "column", "row"]}>
+      <Flex alignItems={"center"} w={"100%"} justifyContent={"center"} wrap="wrap" >
         <Divs heading={headings[0]} array={data[0]} />
         <Divs heading={headings[1]} array={data[1]} />
         <Divs heading={headings[2]} array={data[2]} />
@@ -102,19 +101,19 @@ export default function FreeTools() {
           objectFit={"fill"} bgPosition="center" bgRepeat="no-repeat" w={"80%"} h={"auto"} bgImage={svgfordiv}>
           <Text mb={"3em"} color={"#33475B"} mt={"2.3em"} fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >The HubSpot Guarantee</Text>
 
-          <Flex justifyContent={"space-evenly"} position={["column", "column", "row", "row"]}>
+          <Flex justifyContent={"space-evenly"} alignItems="center" direction={["column", "column", "row", "row"]}>
             <Box></Box>
-            <Box w={"20%"} textAlign={"center"}>
+            <Box w={["100%","100%","20%","20%"]} textAlign={"center"}>
               <Image w={"4em"} style={{ display: "block", margin: "0 auto" }} src={communiy} />
               <Text fontWeight={"bold"}>Full Team Visibility</Text>
               <Text p={2}>Invite your entire team to collaborate in one place.</Text>
             </Box>
-            <Box w={"20%"} textAlign={"center"}>
+            <Box  w={["100%","100%","20%","20%"]} textAlign={"center"}>
               <Image w={"4em"} style={{ display: "block", margin: "0 auto" }} src={collar} />
               <Text fontWeight={"bold"}>Free Access</Text>
               <Text p={2}>This isn't a trial. Your free access never expires.</Text>
             </Box>
-            <Box w={"20%"} textAlign={"center"}>
+            <Box  w={["100%","100%","20%","20%"]} textAlign={"center"}>
               <Image w={"4em"} style={{ display: "block", margin: "0 auto" }} src={graph} />
               <Text fontWeight={"bold"}>All Your Data</Text>
               <Text p={2}>Store as many as one million contacts and companies.</Text>
@@ -153,25 +152,25 @@ export default function FreeTools() {
       {/* ----------------------      Frequently                     Asked                   Questions      -------------------------------        */}
       <Flex justifyContent={"center"} direction={"column"}>
         <Box pt={"2em"} bgSize={"contain"}
-          h={"auto"}
-          minH={"52em"}
+          h={["120vh","100vh","85vh","100vh"]}
+          
           w={"100%"}
           backgroundPosition={"center"} bgRepeat={"no-repeat"}
           bgImage={"//static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/bottom-blob.svg"}>
-          <Text mb={"1em"} color={"#33475B"} mt={["6em", "4em", "1em", "0.3em"]} 
-          fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
+          <Text mb={"1em"} color={"#33475B"} mt={["6em", "4em", "1em", "0.3em"]}
+            fontWeight={"900"} fontSize={["21px", "25px", "28px", "30px"]} >Frequently Asked Questions</Text>
           <br />
-          <Faq faqArray={faqArray}/>
+          <Faq faqArray={faqArray} />
 
           <Box display={"flex"} justifyContent={"center"}>
-            <Text pr={"3px"} fontSize={"12px"}>
+            <Text pr={"0.4rem"} fontSize={"sm"}>
               For more detailed information on product packaging and the limits that apply, please see our </Text>
 
             <Text onMouseLeave={() => setLink(false)}
               onMouseEnter={() => {
                 setLink(true);
 
-              }} as={!link ? "" : "u"} fontSize={"12px"} color={"#1F91AE"}>Product and Services Catalog.</Text>
+              }} as={!link ? "" : "u"} fontSize={"sm"} color={"#1F91AE"}>Product and Services Catalog.</Text>
             <ExternalLinkIcon mt={"0.2em"} w={3} h={3} color={"gray"} />
           </Box>
 
@@ -182,9 +181,9 @@ export default function FreeTools() {
         Start growing today with HubSpot’s free tools.</Text>
       <Button sx={buttonStyle}>Get started free</Button>
 
-      <div>
-          <Footer/>
-        </div>
+      
+        <Footer />
+      
     </Box>
   )
 }
@@ -194,8 +193,9 @@ export default function FreeTools() {
 function Divs({ heading, array }) {
   return (
     // 
-    <Flex direction={"column"} overflow={"hidden"} minH={["22em","22em","26em","26em"]} justifyContent={"space-evenly"}  m={4} w={["93%", "93%", "93%", "13%"]} border={"0.001px solid gray"} pb={"1em"} pt="10" pl={"1em"} pr={"0.3em"} rounded='md' bg='white'>
-      <Text textAlign={"start"} fontWeight={"700"} pb="1em" fontSize={["16px", "16px", "16px", "16px"]}>{heading}</Text>
+    <Flex direction={"column"} overflow={"hidden"} justifyContent={"space-evenly"} h="50vh" m="1.2rem"
+      w={["93%", "93%", "33%", "16%"]} border={"0.001px solid gray"} rounded='md' bg='white' textAlign={"center"}>
+      <Text textAlign={"center"} fontWeight={"700"} ml="1rem" fontSize="sm">{heading}</Text>
       {/*  */}
       <InsideText content={array[0]} />
       <InsideText content={array[1]} />
@@ -216,12 +216,12 @@ function InsideText({ content }) {
     ml: "1em",
     fontWeight: "400",
     textAlign: "start",
-    fontSize: ["14px", "12px", "12px", "14px"],
-    pb: "2em"
+    fontSize: "sm",
+
   }
   return (
-    <Flex direction={"row"} w={"100%"} >
-      <CheckIcon color={"gray"} mt={"0.2em"} />
+    <Flex direction={"row"} w={["50%","50%","50%","100%",]}  alignSelf={["center","center","center","center"]}>
+      <CheckIcon color={"gray"} mt={"0.2em"} ml="1rem" />
       <Text sx={textStyle}>{content}</Text>
     </Flex>
   )

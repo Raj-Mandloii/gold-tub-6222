@@ -13,7 +13,7 @@ import { CheckIcon } from "@chakra-ui/icons";
 export default function CustomCards({ headOne,price,btnContent,defaultValue,marketing1,marketing2,marketing3,belowBtnContent,link,employees}) {
 
     return (
-        <Flex w={"100%"} direction={"column"} >
+        <Flex w={["100%","100%","80%","70%",]} direction={"column"} >
             <Box border={"1px solid lightgrey"}  minH="75em"  width="100%" padding={"0.3% 0.3% 0% 0.3%"} >
             {/* Top Section */}
             <Flex justify={"center"} alignItems="center">
