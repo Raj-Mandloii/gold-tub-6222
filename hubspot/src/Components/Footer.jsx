@@ -359,12 +359,11 @@ const Footer = () => {
           </Flex>
         </Box>
       </Box>
-
-      <Box display={["block", "block", "none"]}>
+      <Box display={["block", "block", "none"]} bgColor="rgb(33,51,67)">
         <Accordion allowToggle>
-          <AccordionItem>
-            <AccordionButton>
-              <Heading size="md" flex="1" textAlign="left" p="15px">
+          <AccordionItem >
+            <AccordionButton color="white">
+              <Heading size="md" flex="1" textAlign="left" p="15px" >
                 Popular Features
               </Heading>
               <AccordionIcon />
@@ -581,7 +580,7 @@ const Footer = () => {
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
-            <AccordionButton>
+            <AccordionButton color="white">
               <Heading size="md" flex="1" textAlign="left" p="15px">
                 Free Tools
               </Heading>
@@ -743,7 +742,7 @@ const Footer = () => {
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
-            <AccordionButton>
+            <AccordionButton color="white">
               <Heading size="md" flex="1" textAlign="left" p="15px">
                 Company
               </Heading>
@@ -849,7 +848,7 @@ const Footer = () => {
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
-            <AccordionButton>
+            <AccordionButton color="white">
               <Heading size="md" flex="1" textAlign="left" p="15px">
                 Customers
               </Heading>
@@ -885,7 +884,7 @@ const Footer = () => {
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem>
-            <AccordionButton>
+            <AccordionButton color="white">
               <Heading size="md" flex="1" textAlign="left" p="15px">
                 Partners
               </Heading>
