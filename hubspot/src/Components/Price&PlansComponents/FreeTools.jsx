@@ -1,9 +1,6 @@
 import {
-  Box, Button, Flex, Text, Spacer, Image, chakra, textDecoration, Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionIcon,
-  AccordionPanel,
+  Box, Button, Flex, Text, Spacer, Image,
+  
 } from '@chakra-ui/react'
 import { Wrap, WrapItem } from '@chakra-ui/react'
 import { PhoneIcon, AddIcon, CheckIcon, ExternalLinkIcon } from '@chakra-ui/icons';
@@ -75,10 +72,11 @@ export default function FreeTools() {
     pr: "2em",
     pt: "2em",
     pb: "2em",
+    mb:"1em",
     borderRadius: "2px"
   }
   return (
-    <Box>
+    <Box >
       <Flex justifyContent={"center"} direction={"column"}>
         <Text fontWeight={"600"} fontSize={["32px", "32px", "32px", "32px"]}>Start growing today with HubSpot’s free tools.</Text>
         <Text color={"gray"} pt={"1.4em"} fontWeight={"400"} marginTop={"0.8em"} marginBottom={"2em"} fontSize={["14px", "14px", "14px", "14px"]} >
@@ -183,9 +181,9 @@ export default function FreeTools() {
         Start growing today with HubSpot’s free tools.</Text>
       <Button sx={buttonStyle}>Get started free</Button>
 
-      <div>
+      
         <Footer />
-      </div>
+      
     </Box>
   )
 }
@@ -195,8 +193,8 @@ export default function FreeTools() {
 function Divs({ heading, array }) {
   return (
     // 
-    <Flex direction={"column"} overflow={"hidden"} justifyContent={"space-evenly"} h="50vh" m="2rem"
-      w={["93%", "93%", "33%", "13%"]} border={"0.001px solid gray"} rounded='md' bg='white' textAlign={"center"}>
+    <Flex direction={"column"} overflow={"hidden"} justifyContent={"space-evenly"} h="50vh" m="1.2rem"
+      w={["93%", "93%", "33%", "16%"]} border={"0.001px solid gray"} rounded='md' bg='white' textAlign={"center"}>
       <Text textAlign={"center"} fontWeight={"700"} ml="1rem" fontSize="sm">{heading}</Text>
       {/*  */}
       <InsideText content={array[0]} />
