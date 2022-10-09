@@ -154,8 +154,8 @@ export default function FreeTools() {
       {/* ----------------------      Frequently                     Asked                   Questions      -------------------------------        */}
       <Flex justifyContent={"center"} direction={"column"}>
         <Box pt={"2em"} bgSize={"contain"}
-          h={"auto"}
-          minH={"52em"}
+          h={["120vh","100vh","85vh","100vh"]}
+          
           w={"100%"}
           backgroundPosition={"center"} bgRepeat={"no-repeat"}
           bgImage={"//static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/bottom-blob.svg"}>
@@ -165,14 +165,14 @@ export default function FreeTools() {
           <Faq faqArray={faqArray} />
 
           <Box display={"flex"} justifyContent={"center"}>
-            <Text pr={"3px"} fontSize={"12px"}>
+            <Text pr={"0.4rem"} fontSize={"sm"}>
               For more detailed information on product packaging and the limits that apply, please see our </Text>
 
             <Text onMouseLeave={() => setLink(false)}
               onMouseEnter={() => {
                 setLink(true);
 
-              }} as={!link ? "" : "u"} fontSize={"12px"} color={"#1F91AE"}>Product and Services Catalog.</Text>
+              }} as={!link ? "" : "u"} fontSize={"sm"} color={"#1F91AE"}>Product and Services Catalog.</Text>
             <ExternalLinkIcon mt={"0.2em"} w={3} h={3} color={"gray"} />
           </Box>
 
