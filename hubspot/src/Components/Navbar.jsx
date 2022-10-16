@@ -32,12 +32,12 @@ const Navbar = ({ s, bs }) => {
   const [resources, setResources] = useState(false);
   const isAuth = useSelector((store) => store.isAuth);
 
-  let [status, setStatus] = useState(false);
+  // let [status, setStatus] = useState(false);
 
-  const handleStatus = () => {
-    status = !status;
-    setStatus(status);
-  };
+  // const handleStatus = () => {
+  //   status = !status;
+  //   setStatus(status);
+  // };
   const btnstyle = {
     backgroundColor: "rgb(255,92,53)",
     color: "white",
@@ -89,6 +89,9 @@ const Navbar = ({ s, bs }) => {
                 </Box>
                 <Box _hover={hover}>
                   <NavLink to="/login">{isAuth ? "Log Out" : "Log in"}</NavLink>
+                </Box>
+                <Box _hover={hover}>
+                  <NavLink to={"/signup"}>{!isAuth && "Sign Up"}</NavLink>
                 </Box>
                 <Box _hover={hover}>
                   <NavLink to="">Customer Support</NavLink>
