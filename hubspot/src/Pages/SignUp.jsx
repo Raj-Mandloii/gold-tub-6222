@@ -31,9 +31,9 @@ const SignUp = () => {
       password,
     };
     // console.log(JSON.stringify(payload));
-    const url="http://localhost:8700/user/signup"
+    // const url="http://localhost:8700/user/signup"
     const deployedUrl="https://hubspotbackend-production.up.railway.app/user/signup"
-    fetch(url, {
+    fetch(deployedUrl, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(payload),

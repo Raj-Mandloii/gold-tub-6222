@@ -50,6 +50,7 @@ const Navbar = ({ s, bs }) => {
   const hover = {
     color: "teal",
     borderBottom: "1px solid teal",
+    cursor:"pointer",
   };
 
   const hover1 = {

@@ -2,14 +2,14 @@ import * as types from "./actionType";
 import axios from "axios";
 
 const deployedUrl="https://hubspotbackend-production.up.railway.app/"
-const url="http://localhost:8700"
+// const url="http://localhost:8700"
 
 const LoginAction = (payload) => (dispatch) => {
   dispatch({ type: types.LOGIN_REQUEST });
   return axios({
     method: "post",
     url: "/user/login",
-    baseURL: url,
+    baseURL: deployedUrl,
     data: payload,
   })
     .then((r) => dispatch({ type: types.LOGIN_SUCCESS, payload: r.data.token }))

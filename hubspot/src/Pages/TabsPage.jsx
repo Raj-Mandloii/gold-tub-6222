@@ -46,7 +46,7 @@ export default function TabPage(){
                     <BelowHeader/>
                     </Box>
                     <Flex direction={{base:"column",md:"column",lg:"row"}} ml={{base:"5%",md:"6%",lg:"7%"}}>
-                    <Card headOne={"Starter"} pOne="$45/mo" p2={"$600"} p3="$540" desc1={"Essential marketing, sales, customer service, CMS, and operations software."} tOne="Marketing Hub Starter" tTwo={"Starts at 1,000 marketing contacts"} tThree={"Sales Hub Starter"} tFour="Starts at 2 paid users" tFive={"Service Hub Starter"} tSix="Starts at 2 paid users" disp1={"block"} disp2="block" ml={"5%"} ml2="8%" ml4={"-7%"} 
+                    <Card headOne={"Starter"} pOne="$45/mo" p2={"$600"} p3="$540" desc1={"Essential marketing, sales, customer service, CMS, and operations software."} tOne="Marketing Hub Starter" tTwo={"Starts at 1,000 marketing contacts"} tThree={"Sales Hub Starter"} tFour="Starts at 2 paid users" tFive={"Service Hub Starter"} tSix="Starts at 2 paid users" disp1={"block"} disp2="block" ml={"0%"} ml2="7%" ml4={"-7%"} 
                     gap2="5%" gap3={"5%"}/>
 
                     <Card headOne={"Professional"} pOne="$1,600/mo" p2={"t $21,360"} p3="$19,200"
@@ -65,7 +65,7 @@ export default function TabPage(){
                     
                 </TabPanel>
                 <TabPanel>
-                    {/* <Text fontSize={"xl"}>Tab Two</Text> */}
+                   
                     <CurrencyBar/>
                     <Box  >
                         <CreateABundleHeader/>
