@@ -15,7 +15,7 @@ userController.post("/signup", async (req, res) => {
   validateEmailAccessibility(email).then((valid) => {
     if (!valid) {
       bcrypt
-        .hash(password, 3)
+        .hash(password, 5)
         .then(async function (hash) {
           const user = new UserModel({
             firstname,
@@ -43,8 +43,8 @@ userController.post("/login", async (req, res) => {
   let hash = userFind.password;
   bcrypt.compare(password, hash, function (err, result) {
     if (result) {
-      let token = jwt.sign({ id: uid }, "secret");
-      res.json({ token: token });
+      let token = jwt.sign({ id: uid }, process.env.SECRET_KEY);
+      res.json({msg:"Login successful", token: token });
     } else {
       res.json("Login Failed");
     }

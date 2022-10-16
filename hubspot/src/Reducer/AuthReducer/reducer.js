@@ -1,20 +1,33 @@
+import { getLocalStorageData } from "../../Utilis/getLoaclStorageData";
+import { removeLocalStorageData } from "../../Utilis/removeLocalStorageData";
+import { setLocalStorageData } from "../../Utilis/setLocalStorageData";
 import * as types from "./actionType";
+
 const initState = {
-  isAuth: false,
+  isAuth: getLocalStorageData("tokenKey") ? true : false,
   isLoading: false,
   isError: false,
-  token: "",
+  token: getLocalStorageData("tokenKey") || "",
+  logOutError:false
 };
 
 const reducer = (oldState = initState, action) => {
+
   const { type, payload } = action;
+
   switch (type) {
+
     case types.LOGIN_REQUEST:
+
       return {
         ...oldState,
         isLoading: true,
       };
+
     case types.LOGIN_SUCCESS:
+
+      console.log(payload)
+      setLocalStorageData("tokenKey",JSON.stringify(payload))
       return {
         ...oldState,
         isAuth: true,
@@ -22,15 +35,38 @@ const reducer = (oldState = initState, action) => {
         isLoading: false,
         isError: false,
       };
+
     case types.LOGIN_FAILED:
+
       return {
+        ...oldState,
         isAuth: false,
         isLoading: false,
-        ...oldState,
         isError: true,
       };
+    
+    case types.LOGOUT_SUCCESS:
+      
+      removeLocalStorageData("tokenKey")
+      return{
+        ...oldState,
+        isAuth:false,
+        isError:false,
+        token:""
+      }
+
+    case types.LOGOUT_FAILED:
+      
+      return{
+        ...oldState,
+        logOutError:payload
+      }
+    
     default:
+
       return oldState;
+
   }
 };
+
 export { reducer };

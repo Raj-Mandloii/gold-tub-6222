@@ -10,6 +10,7 @@ import {
   PopoverContent,
   
   Link,
+  useToast,
 } from "@chakra-ui/react";
 import {
   ChevronDownIcon,
@@ -25,14 +26,16 @@ import Services from "../Assets/Services.svg";
 import WhyHubspot from "../Assets/WhyHubspot.svg";
 import UserResource from "../Assets/UserResource.svg";
 import "./Navbar.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MobileNav from "./MobileNav";
+import { logOutAction } from "../Reducer/AuthReducer/action";
 const Navbar = ({ s, bs }) => {
   const [mouse, setMouse] = useState(false);
   const [resources, setResources] = useState(false);
   const isAuth = useSelector((store) => store.isAuth);
-
+  const dispatch = useDispatch()
   let [status, setStatus] = useState(false);
+  const toast=useToast()
 
   const handleStatus = () => {
     status = !status;
@@ -47,12 +50,28 @@ const Navbar = ({ s, bs }) => {
   const hover = {
     color: "teal",
     borderBottom: "1px solid teal",
+    cursor:"pointer",
   };
 
   const hover1 = {
     color: "teal",
     borderBottom: "2px solid teal",
   };
+
+  const handleLogOut=()=>{
+
+      dispatch(logOutAction())
+      toast({
+        title: "Logout Successful",
+        status: 'success',
+        duration: 8000,
+        isClosable: true,
+        position:"bottom-right"
+      })
+      
+
+  }
+
 
   return (
     <Box style={s} boxShadow={bs} size={["xs", "sm", "md", "lg"]}>
@@ -88,7 +107,13 @@ const Navbar = ({ s, bs }) => {
                   </NavLink>
                 </Box>
                 <Box _hover={hover}>
-                  <NavLink to="/login">{isAuth ? "Log Out" : "Log in"}</NavLink>
+                  <NavLink to="/login">{!isAuth && "Log in"}</NavLink>
+                </Box>
+                <Box _hover={hover} onClick={handleLogOut}>
+                  <>{isAuth && "Log Out"}</>
+                </Box>
+                <Box _hover={hover}>
+                  <NavLink to={"/signup"}>{!isAuth && "Sign Up"}</NavLink>
                 </Box>
                 <Box _hover={hover}>
                   <NavLink to="">Customer Support</NavLink>

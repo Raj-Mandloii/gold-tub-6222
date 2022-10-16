@@ -1,6 +1,5 @@
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 import "./FrequentlyAskedQue.css"
-
 import FaqComp from "./FaqComp"
 import {FiExternalLink} from "react-icons/fi"
 import { PhoneIcon } from "@chakra-ui/icons"
@@ -10,7 +9,7 @@ export default function FrequentlyAskedQue(){
 
     return(
 
-        <Box className="faq"height={{base:"70vh",md:"65vh",lg:"100vh"}} color={"rgb(51, 71, 91)"} width={"auto"}>
+        <Box className="faq"height={{base:"85vh",md:"65vh",lg:"100vh"}} color={"rgb(51, 71, 91)"} width={"auto"}>
             <Text fontSize={{base:"xl",md:"2xl",lg:"4xl"}} fontWeight="bold">Frequently Asked Questions</Text>
             <FaqComp/>
             <Flex gap={"1%"} direction={{base:"column",md:"column",lg:"row"}} m={{base:"5% 1% 2% 1%",md:"3% 0  1% 2%",lg:"3% 0  1% 20%"}}  >

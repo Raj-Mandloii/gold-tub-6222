@@ -1,9 +1,22 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
-import { Box, Button, Checkbox, Divider, Flex, Image, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Divider, Flex, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text } from "@chakra-ui/react";
+import BundleVariants from "./BundleVariants";
 import CRARightSideComp from "./CRARightSideComp";
 
 export default function CABAfterHeader(){
     
+    const priceObj={
+        priceOne:{
+            price1:50,
+            price2:890,
+            price3:3200 
+        },
+        priceTwo:{
+            price1:50,
+            price2:500,
+            price3:1200 
+        }
+    }
 
     const stylesObj={
         marL:["0","10%","10%"],
@@ -21,39 +34,18 @@ export default function CABAfterHeader(){
                 <Flex  width="100%" ml={stylesObj.marL} mr={{base:"5%",md:"0",lg:"0"}} alignItems="center">
                     <Box  width="100%">
                         <Text fontSize={stylesObj.hubHeadings} fontWeight="bold" textAlign={"left"}>Marketing Hub</Text>
-                        <Text fontSize={{base:"x-small",md:"small",lg:"small"}} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Everything you need to capture leads and turn them into customers.</Text>
+                        <Text fontSize={{base:"x-small",md:"small",lg:"small"}} fontWeight={"light"} textAlign="left" m={"2% 0 2% 0"}>Everything you need to capture leads and turn them into customers.</Text>
                     </Box>
                     <Text fontSize={stylesObj.variantsTwo} fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
                 </Flex>
-                <Flex ml={stylesObj.marL} border="1px solid teal" width={"100%"}>
-                   <Box width={"38%"} height="90px" border={"2px solid cyan"} bgColor="cyan.100"
-                        >
-                            <Flex justifyContent={"center"} mt={["15%","8%","6%"]}  gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Starter.svg" />
-                                <Text fontSize={stylesObj.variantsTwo} >Starter</Text>
-                            </Flex>
-                            <Text fontSize={stylesObj.variantsTwo} >$50/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"} >
-                            <Flex justifyContent={"center"} mt={["15%","8%","6%"]}  gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Pro.svg" />
-                                <Text fontSize={stylesObj.variantsTwo} >Professional</Text>
-                            </Flex>
-                            <Text fontSize={stylesObj.variantsTwo} >$890/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"}>
-                            <Flex justifyContent={"center"} mt={["15%","8%","6%"]} gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Ent.svg" mt={"5%"}/>
-                                <Text  fontSize={stylesObj.variantsTwo} >Enterprise</Text>
-                            </Flex>
-                            <Text fontSize={stylesObj.variantsTwo} >$3,200/month</Text>
-                    </Box>
-                </Flex>
+
+            {/* Marketing Hub */}    
+
+                <BundleVariants price1={priceObj.priceOne.price1} price2={priceObj.priceOne.price2} price3={priceObj.priceOne.price3}/>
+
                     <Box m={["5% 0 5% 0","5% 0 5% 10%","5% 0 5% 10%"]} width={"100%"}>
                         <Divider width={"100%"} borderColor={"1px solid grey"} />
                     </Box>
-
-                    {/* Marketing Hub */}
 
                 <Flex  ml={stylesObj.marL} width={"100%"} justifyContent="space-between" alignItems={"center"}>
                     <Box>
@@ -92,34 +84,13 @@ export default function CABAfterHeader(){
                     <Flex mt={"3%"} width="100%" ml={["0","10%","10%"]} alignItems="center">
                     <Box  width="100%">
                         <Text fontSize={stylesObj.hubHeadings} fontWeight="bold" textAlign={"left"}>Sales Hub</Text>
-                        <Text fontSize={["x-small","small","small"]} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Everything you need to close more deals, fast.</Text>
+                        <Text fontSize={["x-small","small","small"]} fontWeight={"light"} textAlign="left" m={"2% 0 2% 0"}>Everything you need to close more deals, fast.</Text>
                     </Box>
                     <Text fontSize={["x-small","small","small"]} fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
                 </Flex>
-                <Flex ml={stylesObj.marL} border="1px solid teal" width={"100%"}>
-                   <Box width={"38%"} height="90px" border={"2px solid cyan"} bgColor="cyan.100"
-                        >
-                            <Flex fontSize={stylesObj.variantsTwo} justifyContent={"center"} mt={["10%","6%","5%"]}  gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Starter.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Starter</Text>
-                            </Flex>
-                            <Text fontSize={stylesObj.variantsTwo} >$50/month</Text>
-                    </Box>
-                    <Box className="pricebox" fontSize={stylesObj.variantsTwo} width={"38%"} height="90px" border={"1px solid cyan"} >
-                            <Flex justifyContent={"center"} mt={["10%","6%","5%"]}  gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Pro.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Professional</Text>
-                            </Flex>
-                            <Text fontSize={stylesObj.variantsTwo} >$500/month</Text>
-                    </Box>
-                    <Box className="pricebox" fontSize={stylesObj.variantsTwo} width={"38%"} height="90px" border={"1px solid cyan"}>
-                            <Flex justifyContent={"center"} mt={["10%","6%","5%"]} gap="2%">
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Ent.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Enterprise</Text>
-                            </Flex>
-                            <Text>$1,200/month</Text>
-                    </Box>
-                </Flex>
+                
+                <BundleVariants price1={priceObj.priceTwo.price1} price2={priceObj.priceTwo.price2} price3={priceObj.priceTwo.price3}  />
+
                 <Box m={["5% 0 5% 0","5% 0 5% 10%","5% 0 5% 10%"]} width={"100%"}>
                         <Divider width={"100%"} borderColor={"1px solid grey"} />
                 </Box>
@@ -152,39 +123,15 @@ export default function CABAfterHeader(){
                     
                     {/* Service Hub */}
 
-                <Flex direction={["column","row","column"]} mt={"4%"} width="100%" ml={stylesObj.marL} alignItems="center">
+                <Flex direction={["row","row","row"]} mt={"4%"} width="100%" ml={stylesObj.marL} alignItems="center">
                     <Box  width="100%">
                         <Text fontSize={stylesObj.hubHeadings} fontWeight="bold" textAlign={"left"}>Service Hub</Text>
-                        <Text fontSize={["x-small","small","small"]} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Everything you need to close more deals, fast.</Text>
+                        <Text fontSize={["x-small","small","small"]} fontWeight={"light"} textAlign="left" m={"2% 0 2% 0"}>Everything you need to close more deals, fast.</Text>
                     </Box>
-                    <Text fontSize={["small","medium","medium"]} fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
+                    <Text fontSize={["x-small","small","medium"]} fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
                 </Flex>
-                <Flex ml={stylesObj.marL} border="1px solid teal" width={"100%"}>
-                   <Box width={"38%"} height="90px" border={"2px solid cyan"} bgColor="cyan.100"
-                       fontSize={stylesObj.variantsTwo} >
-                            <Flex justifyContent={"center"}  gap="2%" mt={stylesObj.variantMargin} >
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Starter.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Starter</Text>
-                            </Flex>
-                            <Text>$50/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"} 
-                     fontSize={stylesObj.variantsTwo} >
-                            <Flex justifyContent={"center"}  gap="2%" mt={stylesObj.variantMargin} >
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Pro.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Professional</Text>
-                            </Flex>
-                            <Text>$500/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"} 
-                     fontSize={stylesObj.variantsTwo} >
-                            <Flex justifyContent={"center"} gap="2%" mt={stylesObj.variantMargin} >
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Ent.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Enterprise</Text>
-                            </Flex>
-                            <Text>$1,200/month</Text>
-                    </Box>
-                </Flex>
+                <BundleVariants price1={priceObj.priceTwo.price1} price2={priceObj.priceTwo.price2} price3={priceObj.priceTwo.price3}  />
+
                 <Box m={["5% 0 5% 0%","5% 0 5% 10%","5% 0 5% 10%"]} width={"100%"}>
                         <Divider width={"100%"} borderColor={"1px solid grey"} />
                 </Box>
@@ -220,68 +167,24 @@ export default function CABAfterHeader(){
                     <Flex mt={"4%"} width="100%" ml={stylesObj.marL} alignItems="center">
                     <Box  width="100%">
                         <Text fontSize={stylesObj.hubHeadings} fontWeight="bold" textAlign={"left"}>CMS Hub</Text>
-                        <Text fontSize={"small"} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Everything you need to close more deals, fast.</Text>
+                        <Text fontSize={"small"} fontWeight={"light"} textAlign="left" m={"2% 0 2% 0"}>Everything you need to close more deals, fast.</Text>
                     </Box>
                     <Text fontSize={stylesObj.variantsTwo} fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
                     </Flex>
-                    <Flex ml={stylesObj.marL} border="1px solid teal" width={"100%"}>
-                    <Box width={"38%"} height="90px" border={"2px solid cyan"} bgColor="cyan.100"
-                      fontSize={stylesObj.variantsTwo}  >
-                            <Flex justifyContent={"center"}  gap="2%" mt={stylesObj.variantMargin} >
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Starter.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Starter</Text>
-                            </Flex>
-                            <Text>$50/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"}  fontSize={stylesObj.variantsTwo} >
-                            <Flex justifyContent={"center"}  gap="2%" mt={stylesObj.variantMargin}>
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Pro.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Professional</Text>
-                            </Flex>
-                            <Text>$500/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"}  fontSize={stylesObj.variantsTwo} >
-                            <Flex justifyContent={"center"} gap="2%" mt={stylesObj.variantMargin}>
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Ent.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Enterprise</Text>
-                            </Flex>
-                            <Text>$1,200/month</Text>
-                    </Box>
-                    </Flex>
+                    
+                    <BundleVariants price1={priceObj.priceTwo.price1} price2={priceObj.priceTwo.price2} price3={priceObj.priceTwo.price3}  />
 
                     {/* Operations Hub */}
 
                     <Flex  width="100%" ml={stylesObj.marL} mt="4%" alignItems="center">
                     <Box  width="100%">
                         <Text fontSize={stylesObj.hubHeadings} fontWeight="bold" textAlign={"left"}>Operations Hub</Text>
-                        <Text fontSize={"small"} fontWeight={"light"} textAlign="left" m={"2% 0 2$ 0"}>Everything you need to close more deals, fast.</Text>
+                        <Text fontSize={"small"} fontWeight={"light"} textAlign="left" m={"2% 0 2% 0"}>Everything you need to close more deals, fast.</Text>
                     </Box>
                     <Text fontSize={stylesObj.variantsTwo} fontWeight={"semibold"} color={"cyan.700"} width="40%">See all features</Text>
                     </Flex>
-                    <Flex ml={stylesObj.marL} border="1px solid teal" width={"100%"}>
-                    <Box width={"38%"} height="90px" border={"2px solid cyan"} bgColor="cyan.100"
-                     fontSize={stylesObj.variantsTwo}   >
-                            <Flex justifyContent={"center"}  gap="2%" mt={stylesObj.variantMargin}>
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Starter.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Starter</Text>
-                            </Flex>
-                            <Text>$50/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"} fontSize={stylesObj.variantsTwo} >
-                            <Flex justifyContent={"center"}  gap="2%" mt={stylesObj.variantMargin} >
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Pro.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Professional</Text>
-                            </Flex>
-                            <Text>$500/month</Text>
-                    </Box>
-                    <Box className="pricebox" width={"38%"} height="90px" border={"1px solid cyan"} fontSize={stylesObj.variantsTwo} >
-                            <Flex justifyContent={"center"} gap="2%" mt={stylesObj.variantMargin} >
-                                <Image src="https://static.hsappstatic.net/pricing-pages-unified-ui/static-1.13808/js/img/productIcons/MarketingHub_Ent.svg" mt={"5%"}/>
-                                <Text mt={"5%"}>Enterprise</Text>
-                            </Flex>
-                            <Text>$1,200/month</Text>
-                    </Box>
-                    </Flex>
+
+                    <BundleVariants price1={priceObj.priceTwo.price1} price2={priceObj.priceTwo.price2} price3={priceObj.priceTwo.price3}  />   
 
                     {/* Add-ons Sec */}
 
