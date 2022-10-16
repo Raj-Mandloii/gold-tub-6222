@@ -15,7 +15,7 @@ import React, { useState } from "react";
 import LoginPage from "../Assets/LoginLogo.svg";
 import { useDispatch } from "react-redux/";
 import { LoginAction } from "../Reducer/AuthReducer/action";
-import { LOGIN_SUCCESS } from "../Reducer/AuthReducer/actionType";
+import { LOGIN_FAILED, LOGIN_SUCCESS } from "../Reducer/AuthReducer/actionType";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -34,7 +34,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
-      dispatch(LoginAction({ email, password })).then((r) => {
+      dispatch(LoginAction({ email:email, password:password })).then((r) => {
         if (r.type === LOGIN_SUCCESS) {
           toast({
             position: "bottom-right",
@@ -44,18 +44,19 @@ const Login = () => {
             isClosable: true,
           });
           navigate("/");
+
+        }else if(r.type === LOGIN_FAILED){
+          toast({
+            position: "bottom-right",
+            title: "Invalid Credentials.",
+            description: "Please Check E-Mail & Password",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+          });
         }
       });
-    } else {
-      toast({
-        position: "bottom-right",
-        title: "Invalid Credentials.",
-        description: "Please Check E-Mail & Password",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
-    }
+    } 
   };
   const gotoHome = () => {
     navigate("/");

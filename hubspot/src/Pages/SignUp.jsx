@@ -31,7 +31,9 @@ const SignUp = () => {
       password,
     };
     // console.log(JSON.stringify(payload));
-    fetch("https://hubspotbackend-production.up.railway.app/user/signup", {
+    const url="http://localhost:8700/user/signup"
+    const deployedUrl="https://hubspotbackend-production.up.railway.app/user/signup"
+    fetch(url, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(payload),
@@ -46,7 +48,14 @@ const SignUp = () => {
               duration: 3000,
               isClosable: true,
             })
-          : navigate("/login")
+          :toast({
+            position: "bottom-right",
+            title: "SignUp successful",
+            status: "info",
+            duration: 3000,
+            isClosable: true,
+          }), 
+          navigate("/login")
       );
   };
   const gotoHome = () => {
