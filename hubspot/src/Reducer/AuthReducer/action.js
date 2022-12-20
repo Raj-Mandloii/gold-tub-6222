@@ -1,7 +1,7 @@
 import * as types from "./actionType";
 import axios from "axios";
 
-const deployedUrl="https://hubspotbackend-production.up.railway.app/"
+const deployedUrl="https://hubspot-api.onrender.com/"
 // const url="http://localhost:8700"
 
 const LoginAction = (payload) => (dispatch) => {
