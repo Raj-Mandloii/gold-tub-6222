@@ -32,7 +32,7 @@ const SignUp = () => {
     };
     // console.log(JSON.stringify(payload));
     // const url="http://localhost:8700/user/signup"
-    const deployedUrl="https://hubspotbackend-production.up.railway.app/user/signup"
+    const deployedUrl="https://hubspot-api.onrender.com/user/signup"
     fetch(deployedUrl, {
       method: "POST",
       headers: { "Content-type": "application/json" },
